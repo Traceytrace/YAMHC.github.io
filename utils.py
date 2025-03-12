@@ -4,13 +4,7 @@ import collections, functools, operator
 import skill_boosts
 
 class monster_hunter_weapon:
-    def __init__(self, name, loaded_slots = None):
-        with open('data/ig_crafted_weapon_data.json', 'r') as file:
-            crafted_weapon_db = json.load(file)
-        with open('data/ig_artian_weapon_data.json', 'r') as file:
-            artian_weapon_db = json.load(file)
-
-        weapon_db = {**crafted_weapon_db, **artian_weapon_db}
+    def __init__(self, name, loaded_slots = None, weapon_db = None):
         self.name = name
         self.raw = weapon_db[name]['raw']
         self.element = weapon_db[name]['element']
@@ -35,10 +29,15 @@ class monster_hunter_weapon:
                 counter += 1
         return counter
 
-    def set_decoration(self, deco_name, slot = None, verbose = False):
-        #get deco from json database
+    def set_decoration(self, deco_name, deco_db, slot = None, verbose = False):
+        if verbose:
+            print(f'Equipping {deco_name} to {self.name} in slot {slot}')
         if deco_name == None:
+            self.slots[slot]['Equipped Deco'] = None
+            self.slots[slot]['Slotted Skills'] = {}
             return
+        
+        #get deco from json database
         with open('data/decoration_data.json', 'r') as file:
             deco_db = json.load(file)
         try:
@@ -51,16 +50,15 @@ class monster_hunter_weapon:
         s1_size = self.slots['Slot 1']['Size']
         s2_size = self.slots['Slot 2']['Size']
         s3_size = self.slots['Slot 3']['Size']
-
-        for slot in self.slots:
-            if self.slots[slot]['Size'] < deco_size:
-                raise Exception(f"Could not slot decoration \"{deco_name}\" of size \"{deco_size}\" into armor \"{self.name}\" with slot sizes with slot sizes [{s1_size},{s2_size},{s3_size}]")
-            if self.slots[slot]['Equipped Deco'] == None:
-                self.slots[slot]['Equipped Deco'] = deco_name
-                self.slots[slot]['Slotted Skills'] = deco_object['Skills']
-                if verbose:
-                    print(f'Equipped {deco_name} to {self.name}')
-                return
+        
+        if self.slots[slot]['Size'] < deco_size:
+            raise Exception(f"Could not slot decoration \"{deco_name}\" of size \"{deco_size}\" into armor \"{self.name}\" with slot sizes with slot sizes [{s1_size},{s2_size},{s3_size}]")
+        
+        self.slots[slot]['Equipped Deco'] = deco_name
+        self.slots[slot]['Slotted Skills'] = deco_object['Skills']
+        if verbose:
+            print(f'Equipped {deco_name} to {self.name}')
+        return
             
     def remove_decoration(self, slot):
         if slot not in [1,2,3]:
@@ -83,9 +81,7 @@ class monster_hunter_weapon:
         return
 
 class monster_hunter_armor:
-    def __init__(self, name, loaded_slots = None):
-        with open('data/armor_data.json', 'r') as file:
-            armor_db = json.load(file)
+    def __init__(self, name, loaded_slots = None, armor_db = None):
         self.name = name
         self.armorType = armor_db[name]['Type']
         self.skills = armor_db[name]['Skills']
@@ -94,9 +90,14 @@ class monster_hunter_armor:
         else:
             self.slots = armor_db[name]['Slots']
    
-    def set_decoration(self, deco_name, slot = None, verbose = False):
+    def set_decoration(self, deco_name, deco_db, slot = None, verbose = False):
+        if verbose:
+            print(f'Equipping {deco_name} to {self.name} in slot {slot}')
         if deco_name == None:
+            self.slots[slot]['Equipped Deco'] = None
+            self.slots[slot]['Slotted Skills'] = {}
             return
+        
         #get deco from json database
         with open('data/decoration_data.json', 'r') as file:
             deco_db = json.load(file)
@@ -110,16 +111,15 @@ class monster_hunter_armor:
         s1_size = self.slots['Slot 1']['Size']
         s2_size = self.slots['Slot 2']['Size']
         s3_size = self.slots['Slot 3']['Size']
-
-        for slot in self.slots:
-            if self.slots[slot]['Size'] < deco_size:
-                raise Exception(f"Could not slot decoration \"{deco_name}\" of size \"{deco_size}\" into armor \"{self.name}\" with slot sizes with slot sizes [{s1_size},{s2_size},{s3_size}]")
-            if self.slots[slot]['Equipped Deco'] == None:
-                self.slots[slot]['Equipped Deco'] = deco_name
-                self.slots[slot]['Slotted Skills'] = deco_object['Skills']
-                if verbose:
-                    print(f'Equipped {deco_name} to {self.name}')
-                return
+        
+        if self.slots[slot]['Size'] < deco_size:
+            raise Exception(f"Could not slot decoration \"{deco_name}\" of size \"{deco_size}\" into armor \"{self.name}\" with slot sizes with slot sizes [{s1_size},{s2_size},{s3_size}]")
+        
+        self.slots[slot]['Equipped Deco'] = deco_name
+        self.slots[slot]['Slotted Skills'] = deco_object['Skills']
+        if verbose:
+            print(f'Equipped {deco_name} to {self.name}')
+        return
             
     def remove_decoration(self, slot):
         if slot not in [1,2,3]:
@@ -151,14 +151,12 @@ class monster_hunter_armor:
         
 
 class monster_hunter_charm:
-    def __init__(self, name):
-        with open('data/charm_data.json', 'r') as file:
-            charm_db = json.load(file)
+    def __init__(self, name, charm_db = None):
         self.name = name
         self.skills = charm_db[name]['Skills']
 
 class mixed_set:
-    def __init__(self, name, weapon, head, chest, arms, waist, legs, charm):
+    def __init__(self, name, weapon, head, chest, arms, waist, legs, charm, skill_db = None):
         self.name = name
         self.weapon = weapon
         self.head = head
@@ -215,15 +213,20 @@ class mixed_set:
             skill_sources.append(self.charm.skills)
         
         # sum the points of the skills of each equipment piece
-        self.active_skills = dict(functools.reduce(operator.add, map(collections.Counter, skill_sources)))
+        self.equipped_skills = dict(functools.reduce(operator.add, map(collections.Counter, skill_sources)))
+        #print(self.equipped_skills)
+        # cap skills at their max level
+        self.equipped_skills = {skill : min(self.equipped_skills[skill], int(skill_db[skill]['max_level'])) for skill in self.equipped_skills} # remove skills with 0 points
+        self.equipped_skills = dict(sorted(self.equipped_skills.items(), key=lambda item: item[1], reverse=True))
 
+
+        
         # add in the unused skills as having 0 points
-        with open('data/skills.csv','r') as file:
-            skill_list = pd.read_csv(file)
-            skill_dict = {skill: 0 for skill in skill_list['name']}
-        for skill in self.active_skills:
-            skill_dict[skill] = self.active_skills[skill]
-        self.skills = skill_dict
+        skill_dict = {sk : 0 for sk in skill_db.keys()}
+        for skill in self.equipped_skills:
+            skill_dict[skill] = self.equipped_skills[skill]
+        self.skills_plus_zeroes = skill_dict
+        #print(self.skills_plus_zeroes)
 
     def calculate_efr(self, 
                       base_sharpness = 'default',
@@ -234,7 +237,8 @@ class mixed_set:
                       might_seed = False,
                       might_pill = False,
                       food_buff = False,
-                      verbose = False):
+                      verbose = False,
+                      uptime_dict = {}):
         base_raw = self.weapon.raw
         element = self.weapon.element
         base_element = self.weapon.element_value
@@ -284,43 +288,54 @@ class mixed_set:
 
         
         
-        if 'Attack Boost' in self.active_skills:
-            base_raw+= base_raw* skill_boosts.attack_boost_percent[self.skills['Attack Boost']]
+        if 'Attack Boost' in self.equipped_skills:
+            base_raw+= base_raw* skill_boosts.attack_boost_percent[self.skills_plus_zeroes['Attack Boost']]
         raw = base_raw
-
+    
         #flat boosts
         if 'Adrenaline Rush' in active_conditional_skills:
-            raw += skill_boosts.adren_rush[self.skills['Adrenaline Rush']]
+            boost = skill_boosts.adren_rush[self.skills_plus_zeroes['Adrenaline Rush']]
+            raw += boost * (uptime_dict['Adrenaline Rush'] / 100) if ('Adrenaline Rush' in uptime_dict and affinity_override==None) else boost
         if 'Agitator' in active_conditional_skills:
-            raw+= skill_boosts.agitator_attack[self.skills['Agitator']]
+            boost = skill_boosts.agitator_attack[self.skills_plus_zeroes['Agitator']]
+            raw += boost * (uptime_dict['Agitator'] / 100) if 'Agitator' in uptime_dict and affinity_override is None else boost
         if 'Burst' in active_conditional_skills:
-            raw+= skill_boosts.burst_raw[self.skills['Burst']]
+            boost = skill_boosts.burst_raw[self.skills_plus_zeroes['Burst']]
+            raw += boost * (uptime_dict['Burst'] / 100) if 'Burst' in uptime_dict and affinity_override is None else boost
         if 'Counterstrike' in active_conditional_skills:
-            raw+= skill_boosts.counterstrike[self.skills['Counterstrike']]
+            boost = skill_boosts.counterstrike[self.skills_plus_zeroes['Counterstrike']]
+            raw += boost * (uptime_dict['Counterstrike'] / 100) if 'Counterstrike' in uptime_dict and affinity_override is None else boost
         if 'Foray' in active_conditional_skills:
-            raw+= skill_boosts.foray_raw[self.skills['Foray']]
+            boost = skill_boosts.foray_raw[self.skills_plus_zeroes['Foray']]
+            raw += boost * (uptime_dict['Foray'] / 100) if 'Foray' in uptime_dict and affinity_override is None else boost
         if 'Peak Performance' in active_conditional_skills:
-            raw+= skill_boosts.peak_performance[self.skills['Peak Performance']]
+            boost = skill_boosts.peak_performance[self.skills_plus_zeroes['Peak Performance']]
+            raw += boost * (uptime_dict['Peak Performance'] / 100) if 'Peak Performance' in uptime_dict and affinity_override is None else boost
         if 'Resentment' in active_conditional_skills:
-            raw+= skill_boosts.resentment[self.skills['Resentment']]
+            boost = skill_boosts.resentment[self.skills_plus_zeroes['Resentment']]
+            raw += boost * (uptime_dict['Resentment'] / 100) if 'Resentment' in uptime_dict and affinity_override is None else boost
         if "Gore Magala's Tyranny" in active_conditional_skills:
-            raw+= skill_boosts.black_eclipse_raw_afflicted[self.skills["Gore Magala's Tyranny"]]
+            boost = skill_boosts.black_eclipse_raw_afflicted[self.skills_plus_zeroes["Gore Magala's Tyranny"]]
+            raw += boost * (uptime_dict["Gore Magala's Tyranny"] / 100) if "Gore Magala's Tyranny" in uptime_dict and affinity_override is None else boost
         if "Gore Magala's Tyranny" in active_conditional_skills:
-            raw+= skill_boosts.black_eclipse_raw_recovered[self.skills["Gore Magala's Tyranny"]]
+            boost = skill_boosts.black_eclipse_raw_recovered[self.skills_plus_zeroes["Gore Magala's Tyranny"]]
+            raw += boost * (uptime_dict["Gore Magala's Tyranny"] / 100) if "Gore Magala's Tyranny" in uptime_dict and affinity_override is None else boost
 
         
         #if 'Ambush' in active_conditional_skills:
         #    raw+= base_raw* skill_boosts.ambush[self.skills['Ambush']]
         if 'Bludgeoner' in active_conditional_skills:
-            raw+= base_raw* skill_boosts.bludgeoner[self.skills['Bludgeoner']]
+            boost = skill_boosts.bludgeoner[self.skills_plus_zeroes['Bludgeoner']]
+            raw += boost * (uptime_dict['Bludgeoner'] / 100) if 'Bludgeoner' in uptime_dict else boost
         if 'Heroics' in active_conditional_skills:
-            raw+= base_raw* skill_boosts.heroics[self.skills['Heroics']]
+            boost = skill_boosts.heroics[self.skills_plus_zeroes['Heroics']]
+            raw += boost * (uptime_dict['Heroics'] / 100) if 'Heroics' in uptime_dict else boost
         
         # percentage boosts
         if triple_up:
             raw += base_raw *0.15 
-        if 'Attack Boost' in self.active_skills:
-            raw+= skill_boosts.attack_boost_raw[self.skills['Attack Boost']]
+        if 'Attack Boost' in self.equipped_skills:
+            raw+= skill_boosts.attack_boost_raw[self.skills_plus_zeroes['Attack Boost']]
 
 
 
@@ -330,13 +345,15 @@ class mixed_set:
 
         elemental_damage = base_element
 
-        #percent boost
+        # percent boost
         if 'Coalescence' in active_conditional_skills:
-            elemental_damage+= base_element* skill_boosts.coalescence[self.skills['Coalescence']]
+            boost = skill_boosts.coalescence[self.skills_plus_zeroes['Coalescence']]
+            elemental_damage += base_element * (boost * (uptime_dict['Coalescence'] / 100) if 'Coalescence' in uptime_dict else boost)
 
-        #flat boost
+        # flat boost
         if 'Burst' in active_conditional_skills:
-            elemental_damage+= skill_boosts.burst_element[self.skills['Burst']]
+            boost = skill_boosts.burst_element[self.skills_plus_zeroes['Burst']]
+            elemental_damage += boost * (uptime_dict['Burst'] / 100) if 'Burst' in uptime_dict else boost
 
 
 
@@ -345,30 +362,34 @@ class mixed_set:
         #-----------------------------------------
         affinity = base_affinity
         #print(f'affinity BEFORE skills: {affinity}')
-        if 'Critical Eye' in self.active_skills:
-            affinity+= skill_boosts.critical_eye[self.skills['Critical Eye']]
+        if 'Critical Eye' in self.equipped_skills:
+            affinity+= skill_boosts.critical_eye[self.skills_plus_zeroes['Critical Eye']]
         if 'Agitator' in active_conditional_skills:
-            affinity+= skill_boosts.agitator_affinity[self.skills['Agitator']]
-        #if 'Critical Draw' in active_conditional_skills:
-        #    affinity+= skill_boosts.critical_draw[self.skills['Critical Draw']]
+            boost = skill_boosts.agitator_affinity[self.skills_plus_zeroes['Agitator']]
+            affinity += boost * (uptime_dict['Agitator'] / 100) if 'Agitator' in uptime_dict else boost
         if 'Foray' in active_conditional_skills:
-            affinity+= skill_boosts.foray_affinity[self.skills['Foray']]
+            boost = skill_boosts.foray_affinity[self.skills_plus_zeroes['Foray']]
+            affinity += boost * (uptime_dict['Foray'] / 100) if 'Foray' in uptime_dict else boost
         if 'Latent Power' in active_conditional_skills:
-            affinity+= skill_boosts.latent_power[self.skills['Latent Power']]
+            boost = skill_boosts.latent_power[self.skills_plus_zeroes['Latent Power']]
+            affinity += boost * (uptime_dict['Latent Power'] / 100) if 'Latent Power' in uptime_dict else boost
         if 'Maximum Might' in active_conditional_skills:
-            affinity+= skill_boosts.maximum_might[self.skills['Maximum Might']]
+            boost = skill_boosts.maximum_might[self.skills_plus_zeroes['Maximum Might']]
+            affinity += boost * (uptime_dict['Maximum Might'] / 100) if 'Maximum Might' in uptime_dict else boost
         if "Gore Magala's Tyranny" in active_conditional_skills:
-            affinity+= skill_boosts.black_eclipse_affinity[self.skills["Gore Magala's Tyranny"]]
+            boost = skill_boosts.black_eclipse_affinity[self.skills_plus_zeroes["Gore Magala's Tyranny"]]
+            affinity += boost * (uptime_dict["Gore Magala's Tyranny"] / 100) if "Gore Magala's Tyranny" in uptime_dict else boost
             if 'Antivirus' in active_conditional_skills:
-                affinity+= skill_boosts.antivirus[self.skills['Antivirus']]
+                boost = skill_boosts.antivirus[self.skills_plus_zeroes['Antivirus']]
+                affinity += boost * (uptime_dict['Antivirus'] / 100) if 'Antivirus' in uptime_dict else boost
         #print(f'affinity AFTER skills: {affinity}')
         
         # crit modifiers
         if 'Critical Boost' in active_conditional_skills:
-            crit_boost = min(self.skills['Critical Boost'], 5)
+            crit_boost = self.skills_plus_zeroes['Critical Boost']
         else:
             crit_boost = 0
-        #print(f'Crit boost: ')
+
         crit_modifier = 0.25 + 0.03 * crit_boost
 
 
@@ -396,14 +417,17 @@ class mixed_set:
         total_damage_num = raw_damage_num + ele_damage_num
         return total_damage_num, raw_damage_num, ele_damage_num
 
-    def get_damage_stats(self, active_conditional_skills, triple_up = True):
-        attack_dict = {}
+    def get_damage_stats(self, active_skills, attack_data:dict = {}, triple_up = True, uptime_dict = {}):
+        attack_stats_dict = {}
         stats_dict = {}
-        data = pd.read_csv('data/ig_attack_data.csv')
-        attacks = {attack_name: {'raw_mv':float(motion_value),'ele_mv' :float(element_mv*1.25)} for attack_name, motion_value,element_mv in zip(data['Attack'], data['Motion Value'],data['Element'])}
-        non_crit_raw_dmg, non_crit_ele_dmg, attack_screen_raw, attack_screen_element = self.calculate_efr(active_conditional_skills=active_conditional_skills, affinity_override=0, verbose = True, triple_up=triple_up)
-        crit_raw_dmg, crit_ele_dmg, _, _ = self.calculate_efr(active_conditional_skills=active_conditional_skills, affinity_override=1, triple_up=triple_up)
-        effective_raw, effective_element, _, _ = self.calculate_efr(active_conditional_skills=active_conditional_skills, triple_up=triple_up)
+
+        # NO UPTIME APPLIED
+        _, _, attack_screen_raw, attack_screen_element = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=0, verbose = True, triple_up=triple_up)
+        
+        # UPTIME APPLIED
+        non_crit_raw_dmg, non_crit_ele_dmg, _, _ = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=0, verbose = True, triple_up=triple_up, uptime_dict=uptime_dict)
+        crit_raw_dmg, crit_ele_dmg, _, _ = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=1, triple_up=triple_up, uptime_dict=uptime_dict)
+        effective_raw, effective_element, _, _ = self.calculate_efr(active_conditional_skills=active_skills, triple_up=triple_up, uptime_dict=uptime_dict)
         
         stats_dict['attack screen raw'] = attack_screen_raw
         stats_dict['attack screen element'] = attack_screen_element
@@ -417,12 +441,14 @@ class mixed_set:
         stats_dict['crit_ele_dmg'] = crit_ele_dmg
         stats_dict['total_crit_damage'] = crit_raw_dmg + crit_ele_dmg
         
-        for attack in attacks:
-            total_non_crit, raw_portion_non_crit, elemental_portion_non_crit = self.calculate_damage_number(non_crit_raw_dmg, non_crit_ele_dmg, raw_mv = attacks[attack]['raw_mv'], ele_mv = attacks[attack]['ele_mv'], raw_hitzone = 80, ele_hitzone = 23.97)
-            total_crit, raw_portion_crit, elemental_portion_crit = self.calculate_damage_number(crit_raw_dmg, crit_ele_dmg, raw_mv = attacks[attack]['raw_mv'], ele_mv = attacks[attack]['ele_mv'], raw_hitzone = 80, ele_hitzone = 23.97)
-            expected_total, expected_raw, expected_elemental = self.calculate_damage_number(effective_raw, effective_element, raw_mv = attacks[attack]['raw_mv'], ele_mv = attacks[attack]['ele_mv'], raw_hitzone = 80, ele_hitzone = 23.97)
+        for attack in attack_data:
             
-            attack_dict[attack] = {
+            total_non_crit, raw_portion_non_crit, elemental_portion_non_crit = self.calculate_damage_number(non_crit_raw_dmg, non_crit_ele_dmg, raw_mv = attack_data[attack]['Motion Value'], ele_mv = attack_data[attack]['Element'], raw_hitzone = 80, ele_hitzone = 23.97)
+            
+            total_crit, raw_portion_crit, elemental_portion_crit = self.calculate_damage_number(crit_raw_dmg, crit_ele_dmg, raw_mv = attack_data[attack]['Motion Value'], ele_mv = attack_data[attack]['Element'], raw_hitzone = 80, ele_hitzone = 23.97)
+            expected_total, expected_raw, expected_elemental = self.calculate_damage_number(effective_raw, effective_element, raw_mv = attack_data[attack]['Motion Value'], ele_mv = attack_data[attack]['Element'], raw_hitzone = 80, ele_hitzone = 23.97)
+            
+            attack_stats_dict[attack] = {
                 'total_non_crit': total_non_crit,
                 'total_crit': total_crit,
                 'effective_total': expected_total,
@@ -433,7 +459,7 @@ class mixed_set:
                 'elemental_portion_crit': elemental_portion_crit,
                 'effective_elemental': expected_elemental
             }
-        return attack_dict, stats_dict
+        return attack_stats_dict, stats_dict
     
     def save_set(self, file_name):
         set_as_json = {}
@@ -460,22 +486,22 @@ class mixed_set:
         with open(file_name, 'w') as json_file:
             json.dump(set_as_json, json_file, indent=4)
 
-def load_set(file_path):
+def load_set(file_path, weapon_db = None, armor_db = None, charm_db = None, skill_db = None):
     try:
         with open(file_path,'r') as file:
             set_as_json = json.load(file)
     except:
         raise Exception(f"could not open json file {file_path}")
         
-    wep = monster_hunter_weapon(name=set_as_json['weapon_name'], loaded_slots=set_as_json['weapon_slots']) if 'weapon_name' in set_as_json else None
-    head = monster_hunter_armor(name=set_as_json['head_name'], loaded_slots=set_as_json['head_slots']) if 'head_name' in set_as_json else None
-    chest = monster_hunter_armor(name=set_as_json['chest_name'], loaded_slots=set_as_json['chest_slots']) if 'chest_name' in set_as_json else None
-    arms = monster_hunter_armor(name=set_as_json['arms_name'], loaded_slots=set_as_json['arms_slots']) if 'arms_name' in set_as_json else None
-    waist = monster_hunter_armor(name=set_as_json['waist_name'], loaded_slots=set_as_json['waist_slots']) if 'waist_name' in set_as_json else None
-    legs = monster_hunter_armor(name=set_as_json['legs_name'], loaded_slots=set_as_json['legs_slots']) if 'legs_name' in set_as_json else None
-    charm = monster_hunter_charm(name=set_as_json['charm_name']) if 'charm_name' in set_as_json else None
+    wep = monster_hunter_weapon(name=set_as_json['weapon_name'], loaded_slots=set_as_json['weapon_slots'], weapon_db=weapon_db) if 'weapon_name' in set_as_json else None
+    head = monster_hunter_armor(name=set_as_json['head_name'], loaded_slots=set_as_json['head_slots'], armor_db=armor_db) if 'head_name' in set_as_json else None
+    chest = monster_hunter_armor(name=set_as_json['chest_name'], loaded_slots=set_as_json['chest_slots'], armor_db=armor_db) if 'chest_name' in set_as_json else None
+    arms = monster_hunter_armor(name=set_as_json['arms_name'], loaded_slots=set_as_json['arms_slots'], armor_db=armor_db) if 'arms_name' in set_as_json else None
+    waist = monster_hunter_armor(name=set_as_json['waist_name'], loaded_slots=set_as_json['waist_slots'], armor_db=armor_db) if 'waist_name' in set_as_json else None
+    legs = monster_hunter_armor(name=set_as_json['legs_name'], loaded_slots=set_as_json['legs_slots'], armor_db=armor_db) if 'legs_name' in set_as_json else None
+    charm = monster_hunter_charm(name=set_as_json['charm_name'], charm_db=charm_db) if 'charm_name' in set_as_json else None
 
-    loaded_set = mixed_set('loaded_set',wep,head,chest,arms,waist,legs,charm)
+    loaded_set = mixed_set('loaded_set',wep,head,chest,arms,waist,legs,charm, skill_db=skill_db)
     return loaded_set
 
 
