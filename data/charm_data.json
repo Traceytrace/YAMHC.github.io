@@ -1,0 +1,1752 @@
+{
+    "Marathon Charm I": {
+        "Skills": {
+            "Marathon Runner": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Marathon Charm II": {
+        "Skills": {
+            "Marathon Runner": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Marathon Charm III": {
+        "Skills": {
+            "Marathon Runner": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fitness Charm I": {
+        "Skills": {
+            "Constitution": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fitness Charm II": {
+        "Skills": {
+            "Constitution": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fitness Charm III": {
+        "Skills": {
+            "Constitution": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fitness Charm IV": {
+        "Skills": {
+            "Constitution": 4
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sheathe Charm I": {
+        "Skills": {
+            "Quick Sheathe": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sheathe Charm II": {
+        "Skills": {
+            "Quick Sheathe": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sheathe Charm III": {
+        "Skills": {
+            "Quick Sheathe": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Challenger Charm I": {
+        "Skills": {
+            "Agitator": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Challenger Charm II": {
+        "Skills": {
+            "Agitator": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Unscathed Charm I": {
+        "Skills": {
+            "Peak Performance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Unscathed Charm II": {
+        "Skills": {
+            "Peak Performance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fury Charm I": {
+        "Skills": {
+            "Resentment": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fury Charm II": {
+        "Skills": {
+            "Resentment": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Exploiter Charm I": {
+        "Skills": {
+            "Weakness Exploit": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Exploiter Charm II": {
+        "Skills": {
+            "Weakness Exploit": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Power Charm I": {
+        "Skills": {
+            "Latent Power": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Power Charm II": {
+        "Skills": {
+            "Latent Power": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Mighty Charm I": {
+        "Skills": {
+            "Maximum Might": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Mighty Charm II": {
+        "Skills": {
+            "Maximum Might": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Surge Charm I": {
+        "Skills": {
+            "Stamina Surge": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Surge Charm II": {
+        "Skills": {
+            "Stamina Surge": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Surge Charm III": {
+        "Skills": {
+            "Stamina Surge": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Defense Charm I": {
+        "Skills": {
+            "Defense Boost": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Defense Charm II": {
+        "Skills": {
+            "Defense Boost": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Defense Charm III": {
+        "Skills": {
+            "Defense Boost": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Defense Charm IV": {
+        "Skills": {
+            "Defense Boost": 4
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blessing Charm I": {
+        "Skills": {
+            "Divine Blessing": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blessing Charm II": {
+        "Skills": {
+            "Divine Blessing": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blessing Charm III": {
+        "Skills": {
+            "Divine Blessing": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Recovery Charm I": {
+        "Skills": {
+            "Recovery Up": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Recovery Charm II": {
+        "Skills": {
+            "Recovery Up": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Recovery Charm III": {
+        "Skills": {
+            "Recovery Up": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Speed Heal Charm I": {
+        "Skills": {
+            "Recovery Speed": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Speed Heal Charm II": {
+        "Skills": {
+            "Recovery Speed": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Speed Heal Charm III": {
+        "Skills": {
+            "Recovery Speed": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Glutton's Charm I": {
+        "Skills": {
+            "Speed Eating": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Glutton's Charm II": {
+        "Skills": {
+            "Speed Eating": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Glutton's Charm III": {
+        "Skills": {
+            "Speed Eating": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Earplugs Charm I": {
+        "Skills": {
+            "Earplugs": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Windproof Charm I": {
+        "Skills": {
+            "Windproof": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Windproof Charm II": {
+        "Skills": {
+            "Windproof": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Windproof Charm III": {
+        "Skills": {
+            "Windproof": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Tremor Charm I": {
+        "Skills": {
+            "Tremor Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Tremor Charm II": {
+        "Skills": {
+            "Tremor Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Tremor Charm III": {
+        "Skills": {
+            "Tremor Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Evasion Charm I": {
+        "Skills": {
+            "Evade Window": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Evasion Charm II": {
+        "Skills": {
+            "Evade Window": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Evasion Charm III": {
+        "Skills": {
+            "Evade Window": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Leaping Charm I": {
+        "Skills": {
+            "Evade Extender": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Leaping Charm II": {
+        "Skills": {
+            "Evade Extender": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Leaping Charm III": {
+        "Skills": {
+            "Evade Extender": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fire Charm I": {
+        "Skills": {
+            "Fire Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fire Charm II": {
+        "Skills": {
+            "Fire Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Fire Charm III": {
+        "Skills": {
+            "Fire Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Water Charm I": {
+        "Skills": {
+            "Water Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Water Charm II": {
+        "Skills": {
+            "Water Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Water Charm III": {
+        "Skills": {
+            "Water Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Thunder Charm I": {
+        "Skills": {
+            "Thunder Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Thunder Charm II": {
+        "Skills": {
+            "Thunder Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Thunder Charm III": {
+        "Skills": {
+            "Thunder Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Ice Charm I": {
+        "Skills": {
+            "Ice Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Ice Charm II": {
+        "Skills": {
+            "Ice Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Ice Charm III": {
+        "Skills": {
+            "Ice Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Dragon Charm I": {
+        "Skills": {
+            "Dragon Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Dragon Charm II": {
+        "Skills": {
+            "Dragon Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Dragon Charm III": {
+        "Skills": {
+            "Dragon Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blight Charm I": {
+        "Skills": {
+            "Blight Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blight Charm II": {
+        "Skills": {
+            "Blight Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Poison Charm I": {
+        "Skills": {
+            "Poison Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Poison Charm II": {
+        "Skills": {
+            "Poison Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Poison Charm III": {
+        "Skills": {
+            "Poison Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Paralysis Charm I": {
+        "Skills": {
+            "Paralysis Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Paralysis Charm II": {
+        "Skills": {
+            "Paralysis Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Paralysis Charm III": {
+        "Skills": {
+            "Paralysis Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sleep Charm I": {
+        "Skills": {
+            "Sleep Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sleep Charm II": {
+        "Skills": {
+            "Sleep Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sleep Charm III": {
+        "Skills": {
+            "Sleep Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Stun Charm I": {
+        "Skills": {
+            "Stun Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Stun Charm II": {
+        "Skills": {
+            "Stun Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Stun Charm III": {
+        "Skills": {
+            "Stun Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blast Charm I": {
+        "Skills": {
+            "Blast Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blast Charm II": {
+        "Skills": {
+            "Blast Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Blast Charm III": {
+        "Skills": {
+            "Blast Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Botany Charm I": {
+        "Skills": {
+            "Botanist": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Botany Charm II": {
+        "Skills": {
+            "Botanist": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Botany Charm III": {
+        "Skills": {
+            "Botanist": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Botany Charm IV": {
+        "Skills": {
+            "Botanist": 4
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Geology Charm I": {
+        "Skills": {
+            "Geologist": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Geology Charm II": {
+        "Skills": {
+            "Geologist": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Geology Charm III": {
+        "Skills": {
+            "Geologist": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Breaker Charm I": {
+        "Skills": {
+            "Partbreaker": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Breaker Charm II": {
+        "Skills": {
+            "Partbreaker": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Bombardier Charm I": {
+        "Skills": {
+            "Bombardier": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Bombardier Charm II": {
+        "Skills": {
+            "Bombardier": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Bombardier Charm III": {
+        "Skills": {
+            "Bombardier": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Mushroom Charm I": {
+        "Skills": {
+            "Mushroomancer": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Mushroom Charm II": {
+        "Skills": {
+            "Mushroomancer": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Mushroom Charm III": {
+        "Skills": {
+            "Mushroomancer": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Extension Charm I": {
+        "Skills": {
+            "Item Prolonger": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Extension Charm II": {
+        "Skills": {
+            "Item Prolonger": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Extension Charm III": {
+        "Skills": {
+            "Item Prolonger": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Friendship Charm I": {
+        "Skills": {
+            "Wide-Range": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Friendship Charm II": {
+        "Skills": {
+            "Wide-Range": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Friendship Charm III": {
+        "Skills": {
+            "Wide-Range": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Friendship Charm IV": {
+        "Skills": {
+            "Wide-Range": 4
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Light Eater's Charm I": {
+        "Skills": {
+            "Free Meal": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Light Eater's Charm II": {
+        "Skills": {
+            "Free Meal": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Light Eater's Charm III": {
+        "Skills": {
+            "Free Meal": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Grit Charm I": {
+        "Skills": {
+            "Heroics": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Grit Charm II": {
+        "Skills": {
+            "Heroics": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Grit Charm III": {
+        "Skills": {
+            "Heroics": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Impact Charm I": {
+        "Skills": {
+            "Flinch Free": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Impact Charm II": {
+        "Skills": {
+            "Flinch Free": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Impact Charm III": {
+        "Skills": {
+            "Flinch Free": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Hungerless Charm I": {
+        "Skills": {
+            "Hunger Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Hungerless Charm II": {
+        "Skills": {
+            "Hunger Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Hungerless Charm III": {
+        "Skills": {
+            "Hunger Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Counter Charm I": {
+        "Skills": {
+            "Counterstrike": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Counter Charm II": {
+        "Skills": {
+            "Counterstrike": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Counter Charm III": {
+        "Skills": {
+            "Counterstrike": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Foray Charm I": {
+        "Skills": {
+            "Foray": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Foray Charm II": {
+        "Skills": {
+            "Foray": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Phoenix Charm I": {
+        "Skills": {
+            "Coalescence": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Phoenix Charm II": {
+        "Skills": {
+            "Coalescence": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Chain Charm I": {
+        "Skills": {
+            "Burst": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Chain Charm II": {
+        "Skills": {
+            "Burst": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Counterattack Charm I": {
+        "Skills": {
+            "Adrenaline Rush": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Counterattack Charm II": {
+        "Skills": {
+            "Adrenaline Rush": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Descent Charm I": {
+        "Skills": {
+            "Ambush": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Descent Charm II": {
+        "Skills": {
+            "Ambush": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Bleed Charm I": {
+        "Skills": {
+            "Bleeding Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Bleed Charm II": {
+        "Skills": {
+            "Bleeding Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Bleed Charm III": {
+        "Skills": {
+            "Bleeding Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Guard Charm I": {
+        "Skills": {
+            "Iron Skin": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Guard Charm II": {
+        "Skills": {
+            "Iron Skin": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Guard Charm III": {
+        "Skills": {
+            "Iron Skin": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Survival Charm I": {
+        "Skills": {
+            "Survival Expert": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Survival Charm II": {
+        "Skills": {
+            "Survival Expert": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Survival Charm III": {
+        "Skills": {
+            "Survival Expert": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Maintenance Charm I": {
+        "Skills": {
+            "Tool Specialist": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Maintenance Charm II": {
+        "Skills": {
+            "Tool Specialist": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Maintenance Charm III": {
+        "Skills": {
+            "Tool Specialist": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Intimidator Charm I": {
+        "Skills": {
+            "Intimidator": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Intimidator Charm II": {
+        "Skills": {
+            "Intimidator": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Intimidator Charm III": {
+        "Skills": {
+            "Intimidator": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Escape Charm I": {
+        "Skills": {
+            "Bind Resistance": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Escape Charm II": {
+        "Skills": {
+            "Bind Resistance": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Escape Charm III": {
+        "Skills": {
+            "Bind Resistance": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Chainblade Charm I": {
+        "Skills": {
+            "Flayer": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Chainblade Charm II": {
+        "Skills": {
+            "Flayer": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Imbibe Charm I": {
+        "Skills": {
+            "Elemental Absorption": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Convert Charm I": {
+        "Skills": {
+            "Convert Element": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sanity Charm I": {
+        "Skills": {
+            "Antivirus": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sanity Charm II": {
+        "Skills": {
+            "Antivirus": 2
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Sanity Charm III": {
+        "Skills": {
+            "Antivirus": 3
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    },
+    "Hope Charm": {
+        "Skills": {
+            "Self-Improvement": 1,
+            "Recovery Up": 1
+        },
+        "Slots": [
+            0,
+            0,
+            0
+        ],
+        "Type": "Charm"
+    } 
+}

@@ -1,0 +1,733 @@
+{
+    "Hope": {
+        "name": "Hope",
+        "raw": 210,
+        "element": "none",
+        "element_value": 0,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Speed Sharpening": 2,
+            "Critical Eye": 1
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Guardian Rathalos": {
+        "name": "Guardian Rathalos",
+        "raw": 210,
+        "element": "fire",
+        "element_value": 20,
+        "affinity": 15,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Masters Touch": 1,
+            "Critical Element": 1
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Ore": {
+        "name": "Ore",
+        "raw": 220,
+        "element": "none",
+        "element_value": 0,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Critical Draw": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Jin Dahaad": {
+        "name": "Jin Dahaad",
+        "raw": 210,
+        "element": "ice",
+        "element_value": 35,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Power Prolonger": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Guardian Ebony Odogaron": {
+        "name": "Guardian Ebony Odogaron",
+        "raw": 210,
+        "element": "dragon",
+        "element_value": 25,
+        "affinity": 10,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Focus": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Balahara": {
+        "name": "Balahara",
+        "raw": 210,
+        "element": "water",
+        "element_value": 20,
+        "affinity": 10,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Power Prolonger": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Rey Dau": {
+        "name": "Rey Dau",
+        "raw": 220,
+        "element": "thunder",
+        "element_value": 20,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Focus": 2,
+            "Charge Master": 1
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Chatacabra": {
+        "name": "Chatacabra",
+        "raw": 230,
+        "element": "none",
+        "element_value": 0,
+        "affinity": 0,
+        "defense": 15,
+        "kinsect_level": "8",
+        "base_sharpness": "blue",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 20,
+        "skills": {
+            "Power Prolonger": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Guardian Arkveld": {
+        "name": "Guardian Arkveld",
+        "raw": 240,
+        "element": "dragon",
+        "element_value": 18,
+        "affinity": -10,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "blue",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 20,
+        "skills": {
+            "Power Prolonger": 2
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Arkveld": {
+        "name": "Arkveld",
+        "raw": 220,
+        "element": "dragon",
+        "element_value": 25,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "9",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Power Prolonger": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Bone Glaive I": {
+        "name": "Bone Glaive I",
+        "raw": 110,
+        "element": "none",
+        "element_value": 0,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "X",
+        "base_sharpness": "yellow",
+        "base_sharpness_value": 50,
+        "handicraft_sharpness": "yellow",
+        "handicraft_sharpness_value": 100,
+        "skills": {},
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 0,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 0,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 0,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Aerial": {
+        "name": "Aerial",
+        "raw": 230,
+        "element": "none",
+        "element_value": 0,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "10",
+        "base_sharpness": "blue",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "blue",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Focus": 3,
+            "Attack Boost": 1
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Ajarakan": {
+        "name": "Ajarakan",
+        "raw": 210,
+        "element": "blast",
+        "element_value": 18,
+        "affinity": 10,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Power Prolonger": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Lala Barina": {
+        "name": "Lala Barina",
+        "raw": 200,
+        "element": "paralysis",
+        "element_value": 20,
+        "affinity": 15,
+        "defense": 0,
+        "kinsect_level": "10",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Critical Draw": 2,
+            "Critical Status": 1
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Nerscylla": {
+        "name": "Nerscylla",
+        "raw": 200,
+        "element": "sleep",
+        "element_value": 20,
+        "affinity": 15,
+        "defense": 0,
+        "kinsect_level": "10",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Charge Master": 2,
+            "Focus": 1
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Yian Kut-Ku": {
+        "name": "Yian Kut-Ku",
+        "raw": 220,
+        "element": "fire",
+        "element_value": 35,
+        "affinity": 0,
+        "defense": 0,
+        "kinsect_level": "10",
+        "base_sharpness": "blue",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 20,
+        "skills": {
+            "Power Prolonger": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Guardian Fulgur Anjanath": {
+        "name": "Guardian Fulgur Anjanath",
+        "raw": 210,
+        "element": "thunder",
+        "element_value": 25,
+        "affinity": 15,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "blue",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 20,
+        "skills": {
+            "Critical Element": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Rathian": {
+        "name": "Rathian",
+        "raw": 210,
+        "element": "poison",
+        "element_value": 18,
+        "affinity": 15,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Critical Status": 3,
+            "Poison Duration Up": 1
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Rathalos": {
+        "name": "Rathalos",
+        "raw": 200,
+        "element": "fire",
+        "element_value": 25,
+        "affinity": 10,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Critical Boost": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Gore Magala": {
+        "name": "Gore Magala",
+        "raw": 200,
+        "element": "dragon",
+        "element_value": 20,
+        "affinity": 20,
+        "defense": 0,
+        "kinsect_level": "8",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Critical Element": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Blangonga": {
+        "name": "Blangonga",
+        "raw": 230,
+        "element": "ice",
+        "element_value": 18,
+        "affinity": -10,
+        "defense": 0,
+        "kinsect_level": "10",
+        "base_sharpness": "white",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "white",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Focus": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    },
+    "Gravios": {
+        "name": "Gravios",
+        "raw": 250,
+        "element": "blast",
+        "element_value": 25,
+        "affinity": -15,
+        "defense": 30,
+        "kinsect_level": "6",
+        "base_sharpness": "blue",
+        "base_sharpness_value": 20,
+        "handicraft_sharpness": "blue",
+        "handicraft_sharpness_value": 70,
+        "skills": {
+            "Punishing Draw": 3
+        },
+        "slots": {
+            "Slot 1": {
+                "Equipped Deco": null,
+                "Size": 3,
+                "Slotted Skills": {}
+            },
+            "Slot 2": {
+                "Equipped Deco": null,
+                "Size": 2,
+                "Slotted Skills": {}
+            },
+            "Slot 3": {
+                "Equipped Deco": null,
+                "Size": 1,
+                "Slotted Skills": {}
+            }
+        }
+    }
+}
