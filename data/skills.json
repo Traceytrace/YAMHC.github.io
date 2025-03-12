@@ -1,0 +1,418 @@
+{
+    "Airborne": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Attack Boost": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Power Prolonger": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Handicraft": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Resentment": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Adrenaline Rush": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Peak Performance": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Counterstrike": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Weakness Exploit": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Maximum Might": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Convert Element": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Defense Boost": {
+        "max_level": 7,
+        "conditional": "false"
+    },
+    "Critical Boost": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Divine Blessing": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Fire Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Fire Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Water Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Thunder Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Ice Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Dragon Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Poison Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Paralysis Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Sleep Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Iron Skin": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Blight Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Stun Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Bleeding Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Bind Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Blast Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Stench Resistance": {
+        "max_level": 2,
+        "conditional": "false"
+    },
+    "Adaptability": {
+        "max_level": 2,
+        "conditional": "false"
+    },
+    "Recovery Up": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Recovery Speed": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Survival Expert": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Constitution": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Stamina Surge": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Marathon Runner": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Hunger Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Agitator": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Latent Power": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Heroics": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Burst": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Foray": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Flayer": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Palico Rally": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Partbreaker": {
+        "max_level": 3,
+        "conditional": "special"
+    },
+    "Artillery": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Coalescence": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Ambush": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Antivirus": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Elemental Absorption": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Self-Improvement": {
+        "max_level": 1,
+        "conditional": "special"
+    },
+    "Evade Window": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Evade Extender": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Earplugs": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Quick Sheathe": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Windproof": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Tremor Resistance": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Flinch Free": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Intimidator": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Speed Eating": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Aquatic/Oilsilt Mobility": {
+        "max_level": 2,
+        "conditional": "false"
+    },
+    "Shock Absorber": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Leap of Faith": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Jump Master": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Cliffhanger": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Wide-Range": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Tool Specialist": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Bombardier": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Mushroomancer": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Item Prolonger": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Free Meal": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Blindsider": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Botanist": {
+        "max_level": 4,
+        "conditional": "false"
+    },
+    "Geologist": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Entomologist": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Outdoorsman": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Neopteron Alert": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Neopteron Camouflage": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Scaling Prowess": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Scale Layering": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Flexible Leathercraft": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Buttery Leathercraft": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Fortifying Pelt": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Alluring Pelt": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Lord's Favor": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Lord's Fury": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Guardian's Pulse": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Guardian's Protection": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Imparted Wisdom": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Doshaguma's Might": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Rathalos's Flare": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Xu Wu's Vigor": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Gravios's Protection": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Blangonga's Spirit": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Ebony Odogaron's Power": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Fulgur Anjanath's Will": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Uth Duna's Cover": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Rey Dau's Voltage": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Nu Udra's Mutiny": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Jin Dahaad's Revolt": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Gore Magala's Tyranny": {
+        "max_level": 5,
+        "conditional": "true"
+    },
+    "Arkveld's Hunger": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Guardian Arkveld's Vitality": {
+        "max_level": 5,
+        "conditional": "false"
+    }
+}
