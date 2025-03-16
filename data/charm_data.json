@@ -8,7 +8,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Marathon Runner 1",
+        "Item Name": "Marathon Charm I"
     },
     "Marathon Charm II": {
         "Skills": {
@@ -19,7 +23,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Marathon Runner 2",
+        "Item Name": "Marathon Charm II"
     },
     "Marathon Charm III": {
         "Skills": {
@@ -30,7 +38,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Marathon Runner 3",
+        "Item Name": "Marathon Charm III"
     },
     "Fitness Charm I": {
         "Skills": {
@@ -41,7 +53,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 1,
+        "Alternate Name": "Constitution 1",
+        "Item Name": "Fitness Charm I"
     },
     "Fitness Charm II": {
         "Skills": {
@@ -52,7 +68,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 2,
+        "Alternate Name": "Constitution 2",
+        "Item Name": "Fitness Charm II"
     },
     "Fitness Charm III": {
         "Skills": {
@@ -63,7 +83,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 3,
+        "Alternate Name": "Constitution 3",
+        "Item Name": "Fitness Charm III"
     },
     "Fitness Charm IV": {
         "Skills": {
@@ -74,7 +98,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 4,
+        "Alternate Name": "Constitution 4",
+        "Item Name": "Fitness Charm IV"
     },
     "Sheathe Charm I": {
         "Skills": {
@@ -85,7 +113,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Quick Sheathe 1",
+        "Item Name": "Sheathe Charm I"
     },
     "Sheathe Charm II": {
         "Skills": {
@@ -96,7 +128,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Quick Sheathe 2",
+        "Item Name": "Sheathe Charm II"
     },
     "Sheathe Charm III": {
         "Skills": {
@@ -107,7 +143,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Quick Sheathe 3",
+        "Item Name": "Sheathe Charm III"
     },
     "Challenger Charm I": {
         "Skills": {
@@ -118,7 +158,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Agitator 1",
+        "Item Name": "Challenger Charm I"
     },
     "Challenger Charm II": {
         "Skills": {
@@ -129,7 +173,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Agitator 2",
+        "Item Name": "Challenger Charm II"
     },
     "Unscathed Charm I": {
         "Skills": {
@@ -140,7 +188,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Peak Performance 1",
+        "Item Name": "Unscathed Charm I"
     },
     "Unscathed Charm II": {
         "Skills": {
@@ -151,7 +203,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Peak Performance 2",
+        "Item Name": "Unscathed Charm II"
     },
     "Fury Charm I": {
         "Skills": {
@@ -162,7 +218,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Resentment 1",
+        "Item Name": "Fury Charm I"
     },
     "Fury Charm II": {
         "Skills": {
@@ -173,7 +233,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Resentment 2",
+        "Item Name": "Fury Charm II"
     },
     "Exploiter Charm I": {
         "Skills": {
@@ -184,7 +248,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Weakness Exploit 1",
+        "Item Name": "Exploiter Charm I"
     },
     "Exploiter Charm II": {
         "Skills": {
@@ -195,7 +263,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Weakness Exploit 2",
+        "Item Name": "Exploiter Charm II"
     },
     "Power Charm I": {
         "Skills": {
@@ -206,7 +278,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Latent Power 1",
+        "Item Name": "Power Charm I"
     },
     "Power Charm II": {
         "Skills": {
@@ -217,7 +293,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Latent Power 2",
+        "Item Name": "Power Charm II"
     },
     "Mighty Charm I": {
         "Skills": {
@@ -228,7 +308,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Maximum Might 1",
+        "Item Name": "Mighty Charm I"
     },
     "Mighty Charm II": {
         "Skills": {
@@ -239,7 +323,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Maximum Might 2",
+        "Item Name": "Mighty Charm II"
     },
     "Surge Charm I": {
         "Skills": {
@@ -250,7 +338,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Stamina Surge 1",
+        "Item Name": "Surge Charm I"
     },
     "Surge Charm II": {
         "Skills": {
@@ -261,7 +353,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Stamina Surge 2",
+        "Item Name": "Surge Charm II"
     },
     "Surge Charm III": {
         "Skills": {
@@ -272,7 +368,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Stamina Surge 3",
+        "Item Name": "Surge Charm III"
     },
     "Defense Charm I": {
         "Skills": {
@@ -283,7 +383,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 1,
+        "Alternate Name": "Defense Boost 1",
+        "Item Name": "Defense Charm I"
     },
     "Defense Charm II": {
         "Skills": {
@@ -294,7 +398,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 2,
+        "Alternate Name": "Defense Boost 2",
+        "Item Name": "Defense Charm II"
     },
     "Defense Charm III": {
         "Skills": {
@@ -305,7 +413,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 3,
+        "Alternate Name": "Defense Boost 3",
+        "Item Name": "Defense Charm III"
     },
     "Defense Charm IV": {
         "Skills": {
@@ -316,7 +428,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 4,
+        "Alternate Name": "Defense Boost 4",
+        "Item Name": "Defense Charm IV"
     },
     "Blessing Charm I": {
         "Skills": {
@@ -327,7 +443,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Divine Blessing 1",
+        "Item Name": "Blessing Charm I"
     },
     "Blessing Charm II": {
         "Skills": {
@@ -338,7 +458,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Divine Blessing 2",
+        "Item Name": "Blessing Charm II"
     },
     "Blessing Charm III": {
         "Skills": {
@@ -349,7 +473,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Divine Blessing 3",
+        "Item Name": "Blessing Charm III"
     },
     "Recovery Charm I": {
         "Skills": {
@@ -360,7 +488,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Recovery Up 1",
+        "Item Name": "Recovery Charm I"
     },
     "Recovery Charm II": {
         "Skills": {
@@ -371,7 +503,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Recovery Up 2",
+        "Item Name": "Recovery Charm II"
     },
     "Recovery Charm III": {
         "Skills": {
@@ -382,7 +518,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Recovery Up 3",
+        "Item Name": "Recovery Charm III"
     },
     "Speed Heal Charm I": {
         "Skills": {
@@ -393,7 +533,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Recovery Speed 1",
+        "Item Name": "Speed Heal Charm I"
     },
     "Speed Heal Charm II": {
         "Skills": {
@@ -404,7 +548,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Recovery Speed 2",
+        "Item Name": "Speed Heal Charm II"
     },
     "Speed Heal Charm III": {
         "Skills": {
@@ -415,7 +563,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Recovery Speed 3",
+        "Item Name": "Speed Heal Charm III"
     },
     "Glutton's Charm I": {
         "Skills": {
@@ -426,7 +578,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Speed Eating 1",
+        "Item Name": "Glutton's Charm I"
     },
     "Glutton's Charm II": {
         "Skills": {
@@ -437,7 +593,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Speed Eating 2",
+        "Item Name": "Glutton's Charm II"
     },
     "Glutton's Charm III": {
         "Skills": {
@@ -448,7 +608,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Speed Eating 3",
+        "Item Name": "Glutton's Charm III"
     },
     "Earplugs Charm I": {
         "Skills": {
@@ -459,7 +623,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 1,
+        "current_level": 1,
+        "Alternate Name": "Earplugs 1",
+        "Item Name": "Earplugs Charm I"
     },
     "Windproof Charm I": {
         "Skills": {
@@ -470,7 +638,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Windproof 1",
+        "Item Name": "Windproof Charm I"
     },
     "Windproof Charm II": {
         "Skills": {
@@ -481,7 +653,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Windproof 2",
+        "Item Name": "Windproof Charm II"
     },
     "Windproof Charm III": {
         "Skills": {
@@ -492,7 +668,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Windproof 3",
+        "Item Name": "Windproof Charm III"
     },
     "Tremor Charm I": {
         "Skills": {
@@ -503,7 +683,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Tremor Resistance 1",
+        "Item Name": "Tremor Charm I"
     },
     "Tremor Charm II": {
         "Skills": {
@@ -514,7 +698,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Tremor Resistance 2",
+        "Item Name": "Tremor Charm II"
     },
     "Tremor Charm III": {
         "Skills": {
@@ -525,7 +713,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Tremor Resistance 3",
+        "Item Name": "Tremor Charm III"
     },
     "Evasion Charm I": {
         "Skills": {
@@ -536,7 +728,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Evade Window 1",
+        "Item Name": "Evasion Charm I"
     },
     "Evasion Charm II": {
         "Skills": {
@@ -547,7 +743,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Evade Window 2",
+        "Item Name": "Evasion Charm II"
     },
     "Evasion Charm III": {
         "Skills": {
@@ -558,7 +758,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Evade Window 3",
+        "Item Name": "Evasion Charm III"
     },
     "Leaping Charm I": {
         "Skills": {
@@ -569,7 +773,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Evade Extender 1",
+        "Item Name": "Leaping Charm I"
     },
     "Leaping Charm II": {
         "Skills": {
@@ -580,7 +788,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Evade Extender 2",
+        "Item Name": "Leaping Charm II"
     },
     "Leaping Charm III": {
         "Skills": {
@@ -591,7 +803,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Evade Extender 3",
+        "Item Name": "Leaping Charm III"
     },
     "Fire Charm I": {
         "Skills": {
@@ -602,7 +818,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Fire Resistance 1",
+        "Item Name": "Fire Charm I"
     },
     "Fire Charm II": {
         "Skills": {
@@ -613,7 +833,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Fire Resistance 2",
+        "Item Name": "Fire Charm II"
     },
     "Fire Charm III": {
         "Skills": {
@@ -624,7 +848,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Fire Resistance 3",
+        "Item Name": "Fire Charm III"
     },
     "Water Charm I": {
         "Skills": {
@@ -635,7 +863,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Water Resistance 1",
+        "Item Name": "Water Charm I"
     },
     "Water Charm II": {
         "Skills": {
@@ -646,7 +878,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Water Resistance 2",
+        "Item Name": "Water Charm II"
     },
     "Water Charm III": {
         "Skills": {
@@ -657,7 +893,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Water Resistance 3",
+        "Item Name": "Water Charm III"
     },
     "Thunder Charm I": {
         "Skills": {
@@ -668,7 +908,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Thunder Resistance 1",
+        "Item Name": "Thunder Charm I"
     },
     "Thunder Charm II": {
         "Skills": {
@@ -679,7 +923,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Thunder Resistance 2",
+        "Item Name": "Thunder Charm II"
     },
     "Thunder Charm III": {
         "Skills": {
@@ -690,7 +938,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Thunder Resistance 3",
+        "Item Name": "Thunder Charm III"
     },
     "Ice Charm I": {
         "Skills": {
@@ -701,7 +953,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Ice Resistance 1",
+        "Item Name": "Ice Charm I"
     },
     "Ice Charm II": {
         "Skills": {
@@ -712,7 +968,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Ice Resistance 2",
+        "Item Name": "Ice Charm II"
     },
     "Ice Charm III": {
         "Skills": {
@@ -723,7 +983,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Ice Resistance 3",
+        "Item Name": "Ice Charm III"
     },
     "Dragon Charm I": {
         "Skills": {
@@ -734,7 +998,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Dragon Resistance 1",
+        "Item Name": "Dragon Charm I"
     },
     "Dragon Charm II": {
         "Skills": {
@@ -745,7 +1013,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Dragon Resistance 2",
+        "Item Name": "Dragon Charm II"
     },
     "Dragon Charm III": {
         "Skills": {
@@ -756,7 +1028,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Dragon Resistance 3",
+        "Item Name": "Dragon Charm III"
     },
     "Blight Charm I": {
         "Skills": {
@@ -767,7 +1043,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Blight Resistance 1",
+        "Item Name": "Blight Charm I"
     },
     "Blight Charm II": {
         "Skills": {
@@ -778,7 +1058,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Blight Resistance 2",
+        "Item Name": "Blight Charm II"
     },
     "Poison Charm I": {
         "Skills": {
@@ -789,7 +1073,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Poison Resistance 1",
+        "Item Name": "Poison Charm I"
     },
     "Poison Charm II": {
         "Skills": {
@@ -800,7 +1088,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Poison Resistance 2",
+        "Item Name": "Poison Charm II"
     },
     "Poison Charm III": {
         "Skills": {
@@ -811,7 +1103,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Poison Resistance 3",
+        "Item Name": "Poison Charm III"
     },
     "Paralysis Charm I": {
         "Skills": {
@@ -822,7 +1118,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Paralysis Resistance 1",
+        "Item Name": "Paralysis Charm I"
     },
     "Paralysis Charm II": {
         "Skills": {
@@ -833,7 +1133,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Paralysis Resistance 2",
+        "Item Name": "Paralysis Charm II"
     },
     "Paralysis Charm III": {
         "Skills": {
@@ -844,7 +1148,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Paralysis Resistance 3",
+        "Item Name": "Paralysis Charm III"
     },
     "Sleep Charm I": {
         "Skills": {
@@ -855,7 +1163,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Sleep Resistance 1",
+        "Item Name": "Sleep Charm I"
     },
     "Sleep Charm II": {
         "Skills": {
@@ -866,7 +1178,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Sleep Resistance 2",
+        "Item Name": "Sleep Charm II"
     },
     "Sleep Charm III": {
         "Skills": {
@@ -877,7 +1193,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Sleep Resistance 3",
+        "Item Name": "Sleep Charm III"
     },
     "Stun Charm I": {
         "Skills": {
@@ -888,7 +1208,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Stun Resistance 1",
+        "Item Name": "Stun Charm I"
     },
     "Stun Charm II": {
         "Skills": {
@@ -899,7 +1223,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Stun Resistance 2",
+        "Item Name": "Stun Charm II"
     },
     "Stun Charm III": {
         "Skills": {
@@ -910,7 +1238,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Stun Resistance 3",
+        "Item Name": "Stun Charm III"
     },
     "Blast Charm I": {
         "Skills": {
@@ -921,7 +1253,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Blast Resistance 1",
+        "Item Name": "Blast Charm I"
     },
     "Blast Charm II": {
         "Skills": {
@@ -932,7 +1268,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Blast Resistance 2",
+        "Item Name": "Blast Charm II"
     },
     "Blast Charm III": {
         "Skills": {
@@ -943,7 +1283,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Blast Resistance 3",
+        "Item Name": "Blast Charm III"
     },
     "Botany Charm I": {
         "Skills": {
@@ -954,7 +1298,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 1,
+        "Alternate Name": "Botanist 1",
+        "Item Name": "Botany Charm I"
     },
     "Botany Charm II": {
         "Skills": {
@@ -965,7 +1313,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 2,
+        "Alternate Name": "Botanist 2",
+        "Item Name": "Botany Charm II"
     },
     "Botany Charm III": {
         "Skills": {
@@ -976,7 +1328,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 3,
+        "Alternate Name": "Botanist 3",
+        "Item Name": "Botany Charm III"
     },
     "Botany Charm IV": {
         "Skills": {
@@ -987,7 +1343,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 4,
+        "Alternate Name": "Botanist 4",
+        "Item Name": "Botany Charm IV"
     },
     "Geology Charm I": {
         "Skills": {
@@ -998,7 +1358,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Geologist 1",
+        "Item Name": "Geology Charm I"
     },
     "Geology Charm II": {
         "Skills": {
@@ -1009,7 +1373,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Geologist 2",
+        "Item Name": "Geology Charm II"
     },
     "Geology Charm III": {
         "Skills": {
@@ -1020,7 +1388,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Geologist 3",
+        "Item Name": "Geology Charm III"
     },
     "Breaker Charm I": {
         "Skills": {
@@ -1031,7 +1403,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Partbreaker 1",
+        "Item Name": "Breaker Charm I"
     },
     "Breaker Charm II": {
         "Skills": {
@@ -1042,7 +1418,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Partbreaker 2",
+        "Item Name": "Breaker Charm II"
     },
     "Bombardier Charm I": {
         "Skills": {
@@ -1053,7 +1433,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Bombardier 1",
+        "Item Name": "Bombardier Charm I"
     },
     "Bombardier Charm II": {
         "Skills": {
@@ -1064,7 +1448,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Bombardier 2",
+        "Item Name": "Bombardier Charm II"
     },
     "Bombardier Charm III": {
         "Skills": {
@@ -1075,7 +1463,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Bombardier 3",
+        "Item Name": "Bombardier Charm III"
     },
     "Mushroom Charm I": {
         "Skills": {
@@ -1086,7 +1478,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Mushroomancer 1",
+        "Item Name": "Mushroom Charm I"
     },
     "Mushroom Charm II": {
         "Skills": {
@@ -1097,7 +1493,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Mushroomancer 2",
+        "Item Name": "Mushroom Charm II"
     },
     "Mushroom Charm III": {
         "Skills": {
@@ -1108,7 +1508,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Mushroomancer 3",
+        "Item Name": "Mushroom Charm III"
     },
     "Extension Charm I": {
         "Skills": {
@@ -1119,7 +1523,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Item Prolonger 1",
+        "Item Name": "Extension Charm I"
     },
     "Extension Charm II": {
         "Skills": {
@@ -1130,7 +1538,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Item Prolonger 2",
+        "Item Name": "Extension Charm II"
     },
     "Extension Charm III": {
         "Skills": {
@@ -1141,7 +1553,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Item Prolonger 3",
+        "Item Name": "Extension Charm III"
     },
     "Friendship Charm I": {
         "Skills": {
@@ -1152,7 +1568,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 1,
+        "Alternate Name": "Wide-Range 1",
+        "Item Name": "Friendship Charm I"
     },
     "Friendship Charm II": {
         "Skills": {
@@ -1163,7 +1583,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 2,
+        "Alternate Name": "Wide-Range 2",
+        "Item Name": "Friendship Charm II"
     },
     "Friendship Charm III": {
         "Skills": {
@@ -1174,7 +1598,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 3,
+        "Alternate Name": "Wide-Range 3",
+        "Item Name": "Friendship Charm III"
     },
     "Friendship Charm IV": {
         "Skills": {
@@ -1185,7 +1613,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 4,
+        "current_level": 4,
+        "Alternate Name": "Wide-Range 4",
+        "Item Name": "Friendship Charm IV"
     },
     "Light Eater's Charm I": {
         "Skills": {
@@ -1196,7 +1628,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Free Meal 1",
+        "Item Name": "Light Eater's Charm I"
     },
     "Light Eater's Charm II": {
         "Skills": {
@@ -1207,7 +1643,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Free Meal 2",
+        "Item Name": "Light Eater's Charm II"
     },
     "Light Eater's Charm III": {
         "Skills": {
@@ -1218,7 +1658,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Free Meal 3",
+        "Item Name": "Light Eater's Charm III"
     },
     "Grit Charm I": {
         "Skills": {
@@ -1229,7 +1673,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Heroics 1",
+        "Item Name": "Grit Charm I"
     },
     "Grit Charm II": {
         "Skills": {
@@ -1240,7 +1688,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Heroics 2",
+        "Item Name": "Grit Charm II"
     },
     "Grit Charm III": {
         "Skills": {
@@ -1251,7 +1703,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Heroics 3",
+        "Item Name": "Grit Charm III"
     },
     "Impact Charm I": {
         "Skills": {
@@ -1262,7 +1718,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Flinch Free 1",
+        "Item Name": "Impact Charm I"
     },
     "Impact Charm II": {
         "Skills": {
@@ -1273,7 +1733,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Flinch Free 2",
+        "Item Name": "Impact Charm II"
     },
     "Impact Charm III": {
         "Skills": {
@@ -1284,7 +1748,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Flinch Free 3",
+        "Item Name": "Impact Charm III"
     },
     "Hungerless Charm I": {
         "Skills": {
@@ -1295,7 +1763,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Hunger Resistance 1",
+        "Item Name": "Hungerless Charm I"
     },
     "Hungerless Charm II": {
         "Skills": {
@@ -1306,7 +1778,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Hunger Resistance 2",
+        "Item Name": "Hungerless Charm II"
     },
     "Hungerless Charm III": {
         "Skills": {
@@ -1317,7 +1793,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Hunger Resistance 3",
+        "Item Name": "Hungerless Charm III"
     },
     "Counter Charm I": {
         "Skills": {
@@ -1328,7 +1808,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Counterstrike 1",
+        "Item Name": "Counter Charm I"
     },
     "Counter Charm II": {
         "Skills": {
@@ -1339,7 +1823,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Counterstrike 2",
+        "Item Name": "Counter Charm II"
     },
     "Counter Charm III": {
         "Skills": {
@@ -1350,7 +1838,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Counterstrike 3",
+        "Item Name": "Counter Charm III"
     },
     "Foray Charm I": {
         "Skills": {
@@ -1361,7 +1853,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Foray 1",
+        "Item Name": "Foray Charm I"
     },
     "Foray Charm II": {
         "Skills": {
@@ -1372,7 +1868,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Foray 2",
+        "Item Name": "Foray Charm II"
     },
     "Phoenix Charm I": {
         "Skills": {
@@ -1383,7 +1883,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Coalescence 1",
+        "Item Name": "Phoenix Charm I"
     },
     "Phoenix Charm II": {
         "Skills": {
@@ -1394,7 +1898,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Coalescence 2",
+        "Item Name": "Phoenix Charm II"
     },
     "Chain Charm I": {
         "Skills": {
@@ -1405,7 +1913,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Burst 1",
+        "Item Name": "Chain Charm I"
     },
     "Chain Charm II": {
         "Skills": {
@@ -1416,7 +1928,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Burst 2",
+        "Item Name": "Chain Charm II"
     },
     "Counterattack Charm I": {
         "Skills": {
@@ -1427,7 +1943,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Adrenaline Rush 1",
+        "Item Name": "Counterattack Charm I"
     },
     "Counterattack Charm II": {
         "Skills": {
@@ -1438,7 +1958,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Adrenaline Rush 2",
+        "Item Name": "Counterattack Charm II"
     },
     "Descent Charm I": {
         "Skills": {
@@ -1449,7 +1973,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Ambush 1",
+        "Item Name": "Descent Charm I"
     },
     "Descent Charm II": {
         "Skills": {
@@ -1460,7 +1988,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Ambush 2",
+        "Item Name": "Descent Charm II"
     },
     "Bleed Charm I": {
         "Skills": {
@@ -1471,7 +2003,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Bleeding Resistance 1",
+        "Item Name": "Bleed Charm I"
     },
     "Bleed Charm II": {
         "Skills": {
@@ -1482,7 +2018,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Bleeding Resistance 2",
+        "Item Name": "Bleed Charm II"
     },
     "Bleed Charm III": {
         "Skills": {
@@ -1493,7 +2033,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Bleeding Resistance 3",
+        "Item Name": "Bleed Charm III"
     },
     "Guard Charm I": {
         "Skills": {
@@ -1504,7 +2048,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Iron Skin 1",
+        "Item Name": "Guard Charm I"
     },
     "Guard Charm II": {
         "Skills": {
@@ -1515,7 +2063,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Iron Skin 2",
+        "Item Name": "Guard Charm II"
     },
     "Guard Charm III": {
         "Skills": {
@@ -1526,7 +2078,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Iron Skin 3",
+        "Item Name": "Guard Charm III"
     },
     "Survival Charm I": {
         "Skills": {
@@ -1537,7 +2093,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Survival Expert 1",
+        "Item Name": "Survival Charm I"
     },
     "Survival Charm II": {
         "Skills": {
@@ -1548,7 +2108,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Survival Expert 2",
+        "Item Name": "Survival Charm II"
     },
     "Survival Charm III": {
         "Skills": {
@@ -1559,7 +2123,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Survival Expert 3",
+        "Item Name": "Survival Charm III"
     },
     "Maintenance Charm I": {
         "Skills": {
@@ -1570,7 +2138,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Tool Specialist 1",
+        "Item Name": "Maintenance Charm I"
     },
     "Maintenance Charm II": {
         "Skills": {
@@ -1581,7 +2153,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Tool Specialist 2",
+        "Item Name": "Maintenance Charm II"
     },
     "Maintenance Charm III": {
         "Skills": {
@@ -1592,7 +2168,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Tool Specialist 3",
+        "Item Name": "Maintenance Charm III"
     },
     "Intimidator Charm I": {
         "Skills": {
@@ -1603,7 +2183,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Intimidator 1",
+        "Item Name": "Intimidator Charm I"
     },
     "Intimidator Charm II": {
         "Skills": {
@@ -1614,7 +2198,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Intimidator 2",
+        "Item Name": "Intimidator Charm II"
     },
     "Intimidator Charm III": {
         "Skills": {
@@ -1625,7 +2213,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Intimidator 3",
+        "Item Name": "Intimidator Charm III"
     },
     "Escape Charm I": {
         "Skills": {
@@ -1636,7 +2228,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Bind Resistance 1",
+        "Item Name": "Escape Charm I"
     },
     "Escape Charm II": {
         "Skills": {
@@ -1647,7 +2243,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Bind Resistance 2",
+        "Item Name": "Escape Charm II"
     },
     "Escape Charm III": {
         "Skills": {
@@ -1658,7 +2258,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Bind Resistance 3",
+        "Item Name": "Escape Charm III"
     },
     "Chainblade Charm I": {
         "Skills": {
@@ -1669,7 +2273,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 1,
+        "Alternate Name": "Flayer 1",
+        "Item Name": "Chainblade Charm I"
     },
     "Chainblade Charm II": {
         "Skills": {
@@ -1680,7 +2288,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 2,
+        "current_level": 2,
+        "Alternate Name": "Flayer 2",
+        "Item Name": "Chainblade Charm II"
     },
     "Imbibe Charm I": {
         "Skills": {
@@ -1691,7 +2303,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 1,
+        "current_level": 1,
+        "Alternate Name": "Elemental Absorption 1",
+        "Item Name": "Imbibe Charm I"
     },
     "Convert Charm I": {
         "Skills": {
@@ -1702,7 +2318,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 1,
+        "current_level": 1,
+        "Alternate Name": "Convert Element 1",
+        "Item Name": "Convert Charm I"
     },
     "Sanity Charm I": {
         "Skills": {
@@ -1713,7 +2333,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 1,
+        "Alternate Name": "Antivirus 1",
+        "Item Name": "Sanity Charm I"
     },
     "Sanity Charm II": {
         "Skills": {
@@ -1724,7 +2348,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 2,
+        "Alternate Name": "Antivirus 2",
+        "Item Name": "Sanity Charm II"
     },
     "Sanity Charm III": {
         "Skills": {
@@ -1735,7 +2363,11 @@
             0,
             0
         ],
-        "Type": "Charm"
+        "Type": "Charm",
+        "max_level": 3,
+        "current_level": 3,
+        "Alternate Name": "Antivirus 3",
+        "Item Name": "Sanity Charm III"
     },
     "Hope Charm": {
         "Skills": {
@@ -1747,6 +2379,10 @@
             0,
             0
         ],
-        "Type": "Charm"
-    } 
+        "Type": "Charm",
+        "max_level": 1,
+        "current_level": 1,
+        "Alternate Name": "Self-Improvement 1/Recovery Up 1",
+        "Item Name": "Hope Charm"
+    }
 }

@@ -2,6 +2,7 @@ import pandas as pd
 import json
 import collections, functools, operator
 import skill_boosts
+import streamlit as st
 
 class monster_hunter_weapon:
     def __init__(self, name, loaded_slots = None, weapon_db = None):
@@ -38,8 +39,6 @@ class monster_hunter_weapon:
             return
         
         #get deco from json database
-        with open('data/decoration_data.json', 'r') as file:
-            deco_db = json.load(file)
         try:
             deco_object = deco_db[deco_name]
         except:
@@ -52,7 +51,7 @@ class monster_hunter_weapon:
         s3_size = self.slots['Slot 3']['Size']
         
         if self.slots[slot]['Size'] < deco_size:
-            raise Exception(f"Could not slot decoration \"{deco_name}\" of size \"{deco_size}\" into armor \"{self.name}\" with slot sizes with slot sizes [{s1_size},{s2_size},{s3_size}]")
+            raise Exception(f"Could not slot decoration \"{deco_name}\" of size \"{deco_size}\" into armor \"{self.name}\" with slot sizes [{s1_size},{s2_size},{s3_size}]")
         
         self.slots[slot]['Equipped Deco'] = deco_name
         self.slots[slot]['Slotted Skills'] = deco_object['Skills']
@@ -90,17 +89,17 @@ class monster_hunter_armor:
         else:
             self.slots = armor_db[name]['Slots']
    
-    def set_decoration(self, deco_name, deco_db, slot = None, verbose = False):
+    def set_decoration(self, deco_name, deco_db, slot = None, key = None, verbose = False):
         if verbose:
             print(f'Equipping {deco_name} to {self.name} in slot {slot}')
         if deco_name == None:
             self.slots[slot]['Equipped Deco'] = None
             self.slots[slot]['Slotted Skills'] = {}
             return
-        
+        #if key:
+        #    del st.session_state[key]
+        #    st.session_state[key] = deco_name
         #get deco from json database
-        with open('data/decoration_data.json', 'r') as file:
-            deco_db = json.load(file)
         try:
             deco_object = deco_db[deco_name]
         except:
@@ -525,7 +524,100 @@ def int_to_roman(num):
     roman_numerals = {1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V'}
     return roman_numerals[num]
 
-#def clear_decos():
-#    st.session_state.weapon_deco_selector_1 = None
-#    st.session_state.weapon_deco_selector_2 = None
-#    st.session_state.weapon_deco_selector_3 = None   
+def filter_charms(charm_db, show_only_max_level = True, alphabetical_order = True):
+    # Filter by levels
+    if show_only_max_level:
+        charm_dict = {}
+        for name,details in charm_db.items():
+            if details['max_level'] == details['current_level']:
+                charm_dict[name] = charm_db[name]
+    else:
+        charm_dict = charm_db
+
+    #convert to list
+    charm_options = [name for name in charm_dict.keys()]
+
+    # filter by alphabetical order or not
+    if alphabetical_order:
+        return sorted(charm_options)
+    return charm_options
+
+def find_item_name_by_alternate_name(charm_db, given_name):
+    for item in charm_db.values():
+        if item['Alternate Name'] == given_name:
+            return item['Item Name']
+    for item in charm_db.values():
+        if item['Item Name'] == given_name:
+            return item['Alternate Name']
+    return None
+
+def find_weapon_name_by_alternate_name(charm_db, given_name):
+    for item in charm_db.values():
+        if item['tree'] == given_name:
+            return item['name']
+    for item in charm_db.values():
+        if item['name'] == given_name:
+            return item['tree']
+    return None
+
+def rename_charms_in_db(charm_db, name_setting = 'Charm'):
+    #print(f'name setting entering function: {name_setting}')
+    name_setting = st.session_state.charm_names
+    #print(f'name setting after: {name_setting}')
+    #print(list(charm_db.keys())[0])
+    if name_setting == 'Charm':
+        new_charm_db = {details['Item Name']: details for _, details in charm_db.items()}
+    elif name_setting == 'Skill':
+        new_charm_db = {details['Alternate Name']: details for _, details in charm_db.items()}
+    st.session_state['charm_data'] = new_charm_db
+
+    # reset charm selector to new name
+    current_entry = st.session_state.charm_selector
+    st.session_state.charm_selector = find_item_name_by_alternate_name(new_charm_db, current_entry)
+    return
+
+def rename_decos_in_db(deco_db, name_setting = 'Deco'):
+    #print(f'name setting entering function: {name_setting}')
+    name_setting = st.session_state.deco_names
+    #print(f'name setting after: {name_setting}')
+
+    #print(list(deco_db.keys())[0])
+    if name_setting == 'Deco':
+        new_deco_db = {details['Item Name']: details for _, details in deco_db.items()}
+    elif name_setting == 'Skill':
+        new_deco_db = {details['Alternate Name']: details for _, details in deco_db.items()}
+    st.session_state['decoration_data'] = new_deco_db
+
+    #reset deco selectors to new names
+    deco_equipment = ['weapon', 'helm', 'chest', 'arms', 'waist', 'legs']
+    for item in deco_equipment:
+        for num in [1,2,3]:
+            entry_key = item + '_deco_selector' + '_' + str(num)
+            if entry_key not in st.session_state:
+                continue
+            current_entry = st.session_state[entry_key]
+            st.session_state[entry_key] = find_item_name_by_alternate_name(new_deco_db, current_entry)
+    return
+
+def rename_weapons_in_db(weapon_db, crafted_db, name_setting = 'Weapon'):
+    #print(f'name setting entering function: {name_setting}')
+    name_setting = st.session_state.weapon_names
+    #print(f'name setting after: {name_setting}')
+
+    #print(list(deco_db.keys())[0])
+    if name_setting == 'Weapon':
+        new_weapon_db = {details['name']: details for _, details in weapon_db.items()}
+    elif name_setting == 'Tree':
+        new_weapon_db = {details['tree']: details for _, details in weapon_db.items()}
+
+    if name_setting == 'Weapon':
+        new_crafted_db = {details['name']: details for _, details in crafted_db.items()}
+    elif name_setting == 'Tree':
+        new_crafted_db = {details['tree']: details for _, details in crafted_db.items()}
+
+    st.session_state['weapon_data'] = new_weapon_db
+    st.session_state['crafted_weapon_data'] = new_crafted_db
+    # reset weapon selector to new name
+    current_entry = st.session_state.weapon_selector
+    st.session_state.weapon_selector = find_weapon_name_by_alternate_name(new_weapon_db, current_entry)
+    return

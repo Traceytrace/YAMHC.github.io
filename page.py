@@ -1,9 +1,15 @@
 import streamlit as st
 import pandas as pd
-from utils import monster_hunter_armor, monster_hunter_charm, monster_hunter_weapon, mixed_set, load_set, roman_to_int, int_to_roman
+from utils import monster_hunter_armor, monster_hunter_charm, monster_hunter_weapon, mixed_set, load_set, roman_to_int, int_to_roman, filter_charms, rename_charms_in_db, rename_decos_in_db, rename_weapons_in_db
 import collections, functools, operator
 import math
+print('----------start-----------------')
 print('Running Page!')
+try:
+    print('include_artian_weapons = ', st.session_state.include_artian_weapons)
+except:
+    print('include_artian_weapons not in session state')
+
 #################################
 # Initialisation
 #################################
@@ -52,20 +58,62 @@ if 'attack_data' not in st.session_state:
     st.session_state.attack_data = pd.read_json('data/ig_attack_data.json')
 if 'skill_data' not in st.session_state:
     st.session_state.skill_data = pd.read_json('data/skills.json')
+if 'user_deco_name_setting' not in st.session_state:
+    st.session_state.user_deco_name_setting = 'Deco'
+if 'user_charm_name_setting' not in st.session_state:
+    st.session_state.user_charm_name_setting = 'Charm'
+if 'user_weapon_name_setting' not in st.session_state:
+    st.session_state.user_weapon_name_setting = 'Weapon'
+if 'user_armor_rank_setting' not in st.session_state:
+    st.session_state.user_armor_rank_setting = 'High'
+if 'equipped_helm' not in st.session_state:
+    st.session_state.equipped_helm = None
+if 'actoveskillcontrol' not in st.session_state:
+    st.session_state.activeskillscontrol = []
+
+
+if 'charm_names' in st.session_state:
+    if st.session_state.user_charm_name_setting != st.session_state.charm_names:
+        #print(f'charm_names = {st.session_state.charm_names} but user_charm_name_setting = {st.session_state.user_charm_name_setting}')
+        rename_charms_in_db(charm_db=st.session_state['charm_data'], name_setting=st.session_state.charm_names)
+if 'deco_names' in st.session_state:
+    if st.session_state.user_deco_name_setting != st.session_state.deco_names:
+        #print(f'deco_names = {st.session_state.deco_names} but user_deco_name_setting = {st.session_state.user_deco_name_setting}')
+        rename_decos_in_db(deco_db=st.session_state['decoration_data'], name_setting=st.session_state.user_deco_name_setting)
+if 'weapon_names' in st.session_state:
+    if st.session_state.user_weapon_name_setting != st.session_state.weapon_names:
+        #print(f'deco_names = {st.session_state.deco_names} but user_deco_name_setting = {st.session_state.user_deco_name_setting}')
+        rename_weapons_in_db(weapon_db=st.session_state['weapon_data'], crafted_db=st.session_state['crafted_weapon_data'], name_setting=st.session_state.user_weapon_name_setting)
+
+try:
+    include_artian_weapons = st.session_state.include_artian_weapons
+except:
+    include_artian_weapons = 'Yes'
+
+# if include_artian_weapons == 'No':
+#     print('include_artian_weapons = No, setting weapon_data to crafted_weapon_data')
+#     weapon_data = st.session_state.crafted_weapon_data
+# if include_artian_weapons == 'Yes':
+#     print('include_artian_weapons = Yes, setting weapon_data to all weapons')
+#     weapon_data = st.session_state.weapon_data
 
 armor_data = st.session_state.armor_data
-weapon_data = st.session_state.weapon_data
 charm_data = st.session_state.charm_data
 decoration_data = st.session_state.decoration_data
 attack_data = st.session_state.attack_data
 skill_data = st.session_state.skill_data
+weapon_data = st.session_state.weapon_data
+
 # create options for user selection
 armor_options = [name for name,details in armor_data.items()]
 armor_options = sorted(armor_options)
-weapon_options = [name for name,details in weapon_data.items()]
+
+if include_artian_weapons == 'Yes':
+    weapon_options = [name for name,details in weapon_data.items()]
+else:
+    weapon_options = [name for name,details in st.session_state.crafted_weapon_data.items()]
+    
 weapon_options = sorted(weapon_options)
-charm_options = [name for name,details in charm_data.items()]
-charm_options = sorted(charm_options)
 
 #st.session_state['loaded_set'] = load_set('sets/meta_frenzy.json'
 
@@ -73,6 +121,8 @@ col1, col2 = st.columns(2)
 with col1:
     # Equipment selection
     st.title("Equipment Set")
+    
+
 with col2:
     # Equipment selection
     st.title("Calculations")
@@ -152,11 +202,16 @@ with button_col_1:
             equipped_charm_name = loaded_set.charm.name
             st.session_state.charm_selector = equipped_charm_name
 
+   
+
 with button_col_2:
     if st.button('Save set to file', key=20, use_container_width = True):
         if not st.session_state['equipped_set']:
             raise ValueError("No set to save.")
         st.session_state['equipped_set'].save_set('sets/test_save.json')
+
+    
+
 
 with button_col_3:
     if st.button('Clear All Equipment', key=21, use_container_width = True):
@@ -168,6 +223,8 @@ with button_col_3:
         st.session_state.legs_selector = None
         st.session_state.charm_selector = None
         st.session_state.equipped_set = None
+
+
 
 with button_col_4:
     if st.button('Clear Decorations', key=22, use_container_width = True):
@@ -190,47 +247,81 @@ with button_col_4:
         st.session_state.legs_deco_selector_2 = None
         st.session_state.legs_deco_selector_3 = None
 
+expander_col_1, expander_col_2 = st.columns(2)
+with expander_col_1:
+    with st.popover("Equipment Option Settings", use_container_width=True):
+        button_col_1, button_col_2, button_col_3 = st.columns(3, gap = 'large')
+        with button_col_1:
+            # Select whether to limit armor rank to low or high
+            st.session_state.user_armor_rank_setting = st.segmented_control(label = "Armor Rank", options = ['Low', 'High'], default= 'High', key = 'armor_rank_selector')
+            # select whether to use decoration names or skill names for decorations in dropdown list
+            st.session_state.user_deco_name_setting = st.segmented_control(label = "Deco Names", options = ['Deco', 'Skill'], default= 'Deco', key = 'deco_names')
+        with button_col_2:    
+            # select whether to include artian weapons in dropdown list
+            st.session_state.user_include_artian_weapon_setting = st.segmented_control(label = "Include Artian Weapons", options = ['No', 'Yes'], default= 'Yes', key = 'include_artian_weapons')
+            st.session_state.user_charm_name_setting = st.segmented_control(label = "Charm Names", options = ['Charm', 'Skill'], default= 'Charm', key = 'charm_names')
+
+        with button_col_3:
+            # select whether to use weapon names or tree names for weapons in dropdown list
+            st.session_state.user_weapon_name_setting= st.segmented_control(label = "Weapon Names", options = ['Weapon', 'Tree'], default= 'Weapon', key = 'weapon_names')
+
 
 
 ###########################################
 # Select Weapon
 ###########################################
 col1, col2 = st.columns(2)
-with col1:
 
-    # Select armor rank
-    user_armor_rank_setting = st.segmented_control(label = "Armor Rank", options = ['Low', 'High'], default= 'High', key = 'armor_rank_selector')
-    
+with col1:
     try:
-        equipped_weapon = monster_hunter_weapon(st.selectbox(label = "Weapon", options = weapon_options, index = None, placeholder='Select a weapon', key = 'weapon_selector'), weapon_db=weapon_data)
-    except:
+        equipped_weapon = monster_hunter_weapon(st.selectbox(label = "Weapon", options = weapon_options, index = None, placeholder='Select a weapon', key = 'weapon_selector'), weapon_db=weapon_data, )
+    except Exception as e:
+        print(f"Error selecting weapon: {e}")
         equipped_weapon = None
 
     # create decoration slots
     if equipped_weapon != None:
         if equipped_weapon.count_slots() > 0:
-            for i, col in enumerate(st.columns(equipped_weapon.count_slots())):
+            for i, col in enumerate(st.columns(3)):
+                if i >= equipped_weapon.count_slots():
+                    continue
                 with col:
                     slot_size = equipped_weapon.slots[f'Slot {i+1}']['Size']
+                    key = f'weapon_deco_selector_{i+1}'
+
                     decoration_options = [name for name,details in decoration_data.items() if int(name[-1]) <= slot_size and details['Type'] == 'sword']
                     decoration_options = sorted(decoration_options, key=lambda x: (x[-1]), reverse=True)
+                    if key in st.session_state:
+                        try:
+                            if int(st.session_state[key][-1]) > slot_size:
+                                print(f"Invalid decoration size for {key}: {st.session_state[key]} > {slot_size}. Setting to None.")
+                                st.session_state[key] = None
+                            else:
+                                print('valid decoration size')
+                                st.session_state[key] = st.session_state[key]
+                        except Exception as e:
+                            #print(f"Error getting default value for {key}: {e}")
+                            st.session_state[key] = None
+                    else:
+                        st.session_state[key] = None
                     equipped_weapon.set_decoration(
                         st.selectbox(label=f"{slot_size}-slot decoration", 
                         options=decoration_options, 
-                        index = None, 
+                        #index = default_value, 
                         placeholder='Set a decoration', 
                         key=f'weapon_deco_selector_{i+1}'),
                         deco_db=decoration_data,
-                        slot = f'Slot {i+1}')
+                        slot = f'Slot {i+1}',
+                        verbose=False)
         
     ############################################
     # Select Helm
     ############################################
-    helm_options = [name for name,details in armor_data.items() if details.Type == 'Helm' and (details['Rank'] == user_armor_rank_setting)]
+    helm_options = [name for name,details in armor_data.items() if details.Type == 'Helm' and (details['Rank'] == st.session_state.user_armor_rank_setting)]
     helm_options = sorted(helm_options)
 
     try:
-        equipped_helm = monster_hunter_armor(st.selectbox(label = "Helm", options = helm_options, index = None, placeholder='Select head armor', key = 'helm_selector'),armor_db=armor_data)
+        equipped_helm = monster_hunter_armor(st.selectbox(label = "Helm", options = helm_options, index = None, placeholder='Select helm armor', key = 'helm_selector'),armor_db=armor_data)
     except:
         equipped_helm = None
 
@@ -242,26 +333,36 @@ with col1:
                     continue
                 with col:
                     slot_size = equipped_helm.slots[f'Slot {i+1}']['Size']
+                    key = f'helm_deco_selector_{i+1}'
                     decoration_options = [name for name,details in decoration_data.items() if int(name[-1]) <= slot_size and details['Type'] == 'shield']
                     decoration_options = sorted(decoration_options, key=lambda x: (x[-1]), reverse=True)
-                    print(f'Slot {i+1}')
-                    print(equipped_helm.slots)
+                    if key in st.session_state:
+                        try:
+                            if int(st.session_state[key][-1]) > slot_size:
+                                print(f"Invalid decoration size for {key}: {st.session_state[key]} > {slot_size}. Setting to None.")
+                                st.session_state[key] = None
+                            else:
+                                print('valid decoration size')
+                                st.session_state[key] = st.session_state[key]
+                        except Exception as e:
+                            #print(f"Error getting default value for {key}: {e}")
+                            st.session_state[key] = None
+                    else:
+                        st.session_state[key] = None
                     equipped_helm.set_decoration(
                         st.selectbox(label=f"{slot_size}-slot decoration", 
                         options=decoration_options, 
-                        index = None, 
+                        #index = default_value, 
                         placeholder='Set a decoration', 
-                        key=f'helm_deco_selector_{i+1}'),
-                        slot = f'Slot {i+1}',
+                        key=key),
                         deco_db=decoration_data,
-                        verbose=True)
-                    print(equipped_helm.slots)
+                        slot = f'Slot {i+1}')
                     
     ############################################
     # Select Chest
     ############################################
 
-    chest_options = [name for name,details in armor_data.items() if details.Type == 'Body' and (details['Rank'] == user_armor_rank_setting)]
+    chest_options = [name for name,details in armor_data.items() if details.Type == 'Body' and (details['Rank'] == st.session_state.user_armor_rank_setting)]
     chest_options = sorted(chest_options)
 
     try:
@@ -277,14 +378,28 @@ with col1:
                     continue
                 with col:
                     slot_size = equipped_chest.slots[f'Slot {i+1}']['Size']
+                    key = f'chest_deco_selector_{i+1}'
                     decoration_options = [name for name,details in decoration_data.items() if int(name[-1]) <= slot_size and details['Type'] == 'shield']
                     decoration_options = sorted(decoration_options, key=lambda x: (x[-1]), reverse=True)
+                    if key in st.session_state:
+                        try:
+                            if int(st.session_state[key][-1]) > slot_size:
+                                print(f"Invalid decoration size for {key}: {st.session_state[key]} > {slot_size}. Setting to None.")
+                                st.session_state[key] = None
+                            else:
+                                print('valid decoration size')
+                                st.session_state[key] = st.session_state[key]
+                        except Exception as e:
+                            #print(f"Error getting default value for {key}: {e}")
+                            st.session_state[key] = None
+                    else:
+                        st.session_state[key] = None
                     equipped_chest.set_decoration(
                         st.selectbox(label=f"{slot_size}-slot decoration", 
                         options=decoration_options, 
-                        index = None, 
+                        #index = default_value, 
                         placeholder='Set a decoration', 
-                        key=f'chest_deco_selector_{i+1}'),
+                        key=key),
                         deco_db=decoration_data,
                         slot = f'Slot {i+1}')
 
@@ -292,7 +407,7 @@ with col1:
     # Select Arms
     ############################################
 
-    arms_options = [name for name,details in armor_data.items() if details.Type == 'Arms' and (details['Rank'] == user_armor_rank_setting)]
+    arms_options = [name for name,details in armor_data.items() if details.Type == 'Arms' and (details['Rank'] == st.session_state.user_armor_rank_setting)]
     arms_options = sorted(arms_options)
 
     try:
@@ -308,22 +423,35 @@ with col1:
                     continue
                 with col:
                     slot_size = equipped_arms.slots[f'Slot {i+1}']['Size']
+                    key = f'arms_deco_selector_{i+1}'
                     decoration_options = [name for name,details in decoration_data.items() if int(name[-1]) <= slot_size and details['Type'] == 'shield']
                     decoration_options = sorted(decoration_options, key=lambda x: (x[-1]), reverse=True)
+                    if key in st.session_state:
+                        try:
+                            if int(st.session_state[key][-1]) > slot_size:
+                                print(f"Invalid decoration size for {key}: {st.session_state[key]} > {slot_size}. Setting to None.")
+                                st.session_state[key] = None
+                            else:
+                                print('valid decoration size')
+                                st.session_state[key] = st.session_state[key]
+                        except Exception as e:
+                            #print(f"Error getting default value for {key}: {e}")
+                            st.session_state[key] = None
+                    else:
+                        st.session_state[key] = None
                     equipped_arms.set_decoration(
                         st.selectbox(label=f"{slot_size}-slot decoration", 
                         options=decoration_options, 
-                        index = None, 
+                        #index = default_value, 
                         placeholder='Set a decoration', 
-                        key=f'arms_deco_selector_{i+1}'),
+                        key=key),
                         deco_db=decoration_data,
                         slot = f'Slot {i+1}')
-
     ############################################
     # Select Waist
     ############################################
 
-    waist_options = [name for name,details in armor_data.items() if details.Type == 'Waist' and (details['Rank'] == user_armor_rank_setting)]
+    waist_options = [name for name,details in armor_data.items() if details.Type == 'Waist' and (details['Rank'] == st.session_state.user_armor_rank_setting)]
     waist_options = sorted(waist_options)
 
     try:
@@ -339,23 +467,36 @@ with col1:
                     continue
                 with col:
                     slot_size = equipped_waist.slots[f'Slot {i+1}']['Size']
+                    key = f'waist_deco_selector_{i+1}'
                     decoration_options = [name for name,details in decoration_data.items() if int(name[-1]) <= slot_size and details['Type'] == 'shield']
                     decoration_options = sorted(decoration_options, key=lambda x: (x[-1]), reverse=True)
+                    if key in st.session_state:
+                        try:
+                            if int(st.session_state[key][-1]) > slot_size:
+                                print(f"Invalid decoration size for {key}: {st.session_state[key]} > {slot_size}. Setting to None.")
+                                st.session_state[key] = None
+                            else:
+                                print('valid decoration size')
+                                st.session_state[key] = st.session_state[key]
+                        except Exception as e:
+                            #print(f"Error getting default value for {key}: {e}")
+                            st.session_state[key] = None
+                    else:
+                        st.session_state[key] = None
                     equipped_waist.set_decoration(
                         st.selectbox(label=f"{slot_size}-slot decoration", 
                         options=decoration_options, 
-                        index = None, 
+                        #index = default_value, 
                         placeholder='Set a decoration', 
-                        key=f'waist_deco_selector_{i+1}'),
+                        key=key),
                         deco_db=decoration_data,
-                        slot = f'Slot {i+1}'
-                        )
+                        slot = f'Slot {i+1}')
 
     ############################################
     # Select Legs
     ############################################
 
-    legs_options = [name for name,details in armor_data.items() if details.Type == 'Legs' and (details['Rank'] == user_armor_rank_setting)]
+    legs_options = [name for name,details in armor_data.items() if details.Type == 'Legs' and (details['Rank'] == st.session_state.user_armor_rank_setting)]
     legs_options = sorted(legs_options)
 
     try:
@@ -371,38 +512,37 @@ with col1:
                     continue
                 with col:
                     slot_size = equipped_legs.slots[f'Slot {i+1}']['Size']
+                    key = f'legs_deco_selector_{i+1}'
                     decoration_options = [name for name,details in decoration_data.items() if int(name[-1]) <= slot_size and details['Type'] == 'shield']
                     decoration_options = sorted(decoration_options, key=lambda x: (x[-1]), reverse=True)
+                    if key in st.session_state:
+                        try:
+                            if int(st.session_state[key][-1]) > slot_size:
+                                print(f"Invalid decoration size for {key}: {st.session_state[key]} > {slot_size}. Setting to None.")
+                                st.session_state[key] = None
+                            else:
+                                print('valid decoration size')
+                                st.session_state[key] = st.session_state[key]
+                        except Exception as e:
+                            #print(f"Error getting default value for {key}: {e}")
+                            st.session_state[key] = None
+                    else:
+                        st.session_state[key] = None
                     equipped_legs.set_decoration(
                         st.selectbox(label=f"{slot_size}-slot decoration", 
                         options=decoration_options, 
-                        index = None, 
+                        #index = default_value, 
                         placeholder='Set a decoration', 
-                        key=f'legs_deco_selector_{i+1}'),
+                        key=key),
                         deco_db=decoration_data,
                         slot = f'Slot {i+1}')
                     
     ############################################
     # Select Charm
     ############################################
-
-    # Filter charm options to only show the max level of each charm
-    max_level_charms = {}
-    for charm in charm_options:
-        if charm.split()[-1] == 'Charm':
-            max_level_charms[charm] = charm
-            continue
-        base_name = ' '.join(charm.split()[:-1])
-        level = roman_to_int(charm)
-        if base_name not in max_level_charms or level > roman_to_int(max_level_charms[base_name]):
-            max_level_charms[base_name] = int_to_roman(level)
-
-    filtered_charm_options = [f"{name} {level}" for name, level in max_level_charms.items()]
-    filtered_charm_options = sorted(filtered_charm_options)
-
-
+    charm_options = filter_charms(charm_db=charm_data, show_only_max_level=True, alphabetical_order=True)
     try:
-        equipped_charm = monster_hunter_charm(st.selectbox(label = "Charm", options = filtered_charm_options, index = None, placeholder='Select a charm', key = 'charm_selector'),charm_db=charm_data)
+        equipped_charm = monster_hunter_charm(st.selectbox(label = "Charm", options = charm_options, index = None, placeholder='Select a charm', key = 'charm_selector'), charm_db=charm_data)
     except:
         equipped_charm = None
 
@@ -423,6 +563,7 @@ with col1:
             skill_db=skill_data
         )   
     except Exception as e:
+        print(f"Error creating mixed set: {e}")
         st.session_state['equipped_set'] = None
 
      
@@ -512,12 +653,16 @@ with col2:
             if st.button('Select All Skills', use_container_width = True):
                 st.session_state.activeskillscontrol = conditional_skills
         
-        active_conditional_skills = st.pills("Conditional Skills", options=conditional_skills, selection_mode="multi", default=[], key='activeskillscontrol')
+        with expander_col_2:
+            with st.popover("Calculator Settings", use_container_width=True):
+                st.write('placeholder')
+
+        active_conditional_skills = st.pills("Conditional Skills", options=conditional_skills, selection_mode="multi", key='activeskillscontrol')
         active_skills = non_conditional_skills + active_conditional_skills
 
 
         # Kinsect Extract Buff Selector
-        buff_mode = st.segmented_control(label = "Buffs", options = ["Triple Up", "Red Buff Only", 'No Buffs'],default=["No Buffs"], selection_mode='single', key='triple_up', label_visibility="collapsed")
+        buff_mode = st.segmented_control(label = "Buffs", options = ["Triple Up", "Red Buff Only", 'No Buffs'],default=["Triple Up"], selection_mode='single', key='triple_up', label_visibility="collapsed")
         attack_prerequisites = ['none']
         if buff_mode == "Triple Up":
             triple_up = True
