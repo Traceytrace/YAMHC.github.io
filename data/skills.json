@@ -1,7 +1,11 @@
 {
     "Airborne": {
         "max_level": 3,
-        "conditional": "true"
+        "conditional": "special"
+    },
+    "Focus": {
+        "max_level": 3,
+        "conditional": "false"
     },
     "Attack Boost": {
         "max_level": 5,
@@ -51,6 +55,18 @@
         "max_level": 5,
         "conditional": "false"
     },
+    "Special Ammo Boost": {
+        "max_level": 1,
+        "conditional": "special"
+    },
+    "Charge Up": {
+        "max_level": 1,
+        "conditional": "special"
+    },
+    "Exhaust Functionality": {
+        "max_level": 1,
+        "conditional": "false"
+    },
     "Divine Blessing": {
         "max_level": 3,
         "conditional": "false"
@@ -81,6 +97,14 @@
     },
     "Poison Resistance": {
         "max_level": 3,
+        "conditional": "false"
+    },
+    "Poison Functionality": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Blast Functionality": {
+        "max_level": 1,
         "conditional": "false"
     },
     "Paralysis Resistance": {
@@ -179,6 +203,10 @@
         "max_level": 5,
         "conditional": "false"
     },
+    "Tetrad Shot": {
+        "max_level": 3,
+        "conditional": "true"
+    },
     "Partbreaker": {
         "max_level": 3,
         "conditional": "special"
@@ -212,6 +240,58 @@
         "conditional": "false"
     },
     "Evade Extender": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Thunder Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Ice Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Dragon Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Ballistics": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Water Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Blast Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Critical Element": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Critical Eye": {
+        "max_level": 5,
+        "conditional": "false"
+    },
+    "Offensive Guard": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Slugger": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Rapid Morph": {
+        "max_level": 3,
+        "conditional": "special"
+    },
+    "Opening Shot": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Guard": {
         "max_level": 3,
         "conditional": "false"
     },
@@ -265,6 +345,102 @@
     },
     "Wide-Range": {
         "max_level": 5,
+        "conditional": "false"
+    },
+    "Guard Up": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Bludgeoner": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Charge Master": {
+        "max_level": 3,
+        "conditional": "special"
+    },
+    "Critical Status": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Stamina Thief": {
+        "max_level": 3,
+        "conditional": "special"
+    },
+    "Critical Draw": {
+        "max_level": 3,
+        "conditional": "special"
+    },
+    "Normal Shots": {
+        "max_level": 1,
+        "conditional": "special"
+    },
+    "Punishing Draw": {
+        "max_level": 3,
+        "conditional": "special"
+    },
+    "Speed Sharpening": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Load Shells": {
+        "max_level": 2,
+        "conditional": "false"
+    },
+    "Master's Touch": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Mind's Eye": {
+        "max_level": 3,
+        "conditional": "special"
+    },
+    "Para Functionality": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Paralysis Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Piercing Shots": {
+        "max_level": 1,
+        "conditional": "special"
+    },
+    "Poison Duration Up": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Rapid Fire Up": {
+        "max_level": 1,
+        "conditional": "special"
+    },
+    "Protective Polish": {
+        "max_level": 3,
+        "conditional": "true"
+    },
+    "Sleep Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Sleep Functionality": {
+        "max_level": 1,
+        "conditional": "false"
+    },
+    "Horn Maestro": {
+        "max_level": 2,
+        "conditional": "false"
+    },
+    "Spread/Power Shots": {
+        "max_level": 1,
+        "conditional": "special"
+    },
+    "Poison Attack": {
+        "max_level": 3,
+        "conditional": "false"
+    },
+    "Razor Sharp": {
+        "max_level": 3,
         "conditional": "false"
     },
     "Tool Specialist": {

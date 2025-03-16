@@ -1,6 +1,7 @@
 {
-    "Hope": {
-        "name": "Hope",
+    "Esperanza Glaive": {
+        "name": "Esperanza Glaive",
+        "tree" : "Expedition",
         "raw": 210,
         "element": "none",
         "element_value": 0,
@@ -33,8 +34,9 @@
             }
         }
     },
-    "Guardian Rathalos": {
-        "name": "Guardian Rathalos",
+    "Alabaster Rathmaul": {
+        "name": "Alabaster Rathmaul",
+        "tree" : "G. Rathalos",
         "raw": 210,
         "element": "fire",
         "element_value": 20,
@@ -46,7 +48,7 @@
         "handicraft_sharpness": "white",
         "handicraft_sharpness_value": 70,
         "skills": {
-            "Masters Touch": 1,
+            "Master's Touch": 1,
             "Critical Element": 1
         },
         "slots": {
@@ -67,8 +69,9 @@
             }
         }
     },
-    "Ore": {
-        "name": "Ore",
+    "Chrome Gale": {
+        "name": "Chrome Gale",
+        "tree" : "Ore",
         "raw": 220,
         "element": "none",
         "element_value": 0,
@@ -100,8 +103,9 @@
             }
         }
     },
-    "Jin Dahaad": {
-        "name": "Jin Dahaad",
+    "Precipice Geumgel": {
+        "name": "Precipice Geumgel",
+        "tree" : "Jin Dahaad",
         "raw": 210,
         "element": "ice",
         "element_value": 35,
@@ -133,8 +137,9 @@
             }
         }
     },
-    "Guardian Ebony Odogaron": {
-        "name": "Guardian Ebony Odogaron",
+    "Bequeathed Testament": {
+        "name": "Bequeathed Testament",
+        "tree" : "G. Ebony",
         "raw": 210,
         "element": "dragon",
         "element_value": 25,
@@ -166,8 +171,9 @@
             }
         }
     },
-    "Balahara": {
-        "name": "Balahara",
+    "Sandsea Uchaltiya": {
+        "name": "Sandsea Uchaltiya",
+        "tree" : "Balahara",
         "raw": 210,
         "element": "water",
         "element_value": 20,
@@ -199,8 +205,9 @@
             }
         }
     },
-    "Rey Dau": {
-        "name": "Rey Dau",
+    "Halilintar Clairglaive": {
+        "name": "Halilintar Clairglaive",
+        "tree" : "Rey Dau",
         "raw": 220,
         "element": "thunder",
         "element_value": 20,
@@ -233,8 +240,9 @@
             }
         }
     },
-    "Chatacabra": {
-        "name": "Chatacabra",
+    "Shrouded Laphoka": {
+        "name": "Shrouded Laphoka",
+        "tree" : "Chatacabra",
         "raw": 230,
         "element": "none",
         "element_value": 0,
@@ -266,8 +274,9 @@
             }
         }
     },
-    "Guardian Arkveld": {
-        "name": "Guardian Arkveld",
+    "G. Enduring Tor": {
+        "name": "G. Enduring Tor",
+        "tree" : "G. Arkveld",
         "raw": 240,
         "element": "dragon",
         "element_value": 18,
@@ -299,8 +308,9 @@
             }
         }
     },
-    "Arkveld": {
-        "name": "Arkveld",
+    "Enduring Tor": {
+        "name": "Enduring Tor",
+        "tree" : "Arkveld",
         "raw": 220,
         "element": "dragon",
         "element_value": 25,
@@ -332,8 +342,9 @@
             }
         }
     },
-    "Bone Glaive I": {
-        "name": "Bone Glaive I",
+    "Bone Staff I": {
+        "name": "Bone Staff I",
+        "tree" : "Bone (for testing)",
         "raw": 110,
         "element": "none",
         "element_value": 0,
@@ -363,8 +374,9 @@
             }
         }
     },
-    "Aerial": {
-        "name": "Aerial",
+    "Aerial Glaive": {
+        "name": "Aerial Glaive",
+        "tree" : "Bone",
         "raw": 230,
         "element": "none",
         "element_value": 0,
@@ -397,8 +409,9 @@
             }
         }
     },
-    "Ajarakan": {
-        "name": "Ajarakan",
+    "Ajara-Bhadra": {
+        "name": "Ajara-Bhadra",
+        "tree" : "Ajarakan",
         "raw": 210,
         "element": "blast",
         "element_value": 18,
@@ -430,8 +443,9 @@
             }
         }
     },
-    "Lala Barina": {
-        "name": "Lala Barina",
+    "Lala Stromatopelm": {
+        "name": "Lala Stromatopelm",
+        "tree" : "Lala Barina",
         "raw": 200,
         "element": "paralysis",
         "element_value": 20,
@@ -464,8 +478,9 @@
             }
         }
     },
-    "Nerscylla": {
-        "name": "Nerscylla",
+    "Stealth Glaive Redux": {
+        "name": "Stealth Glaive Redux",
+        "tree" : "Nerscylla",
         "raw": 200,
         "element": "sleep",
         "element_value": 20,
@@ -498,8 +513,9 @@
             }
         }
     },
-    "Yian Kut-Ku": {
-        "name": "Yian Kut-Ku",
+    "Toucan Pike": {
+        "name": "Toucan Pike",
+        "tree" : "Yian Kut-Ku",
         "raw": 220,
         "element": "fire",
         "element_value": 35,
@@ -531,8 +547,9 @@
             }
         }
     },
-    "Guardian Fulgur Anjanath": {
-        "name": "Guardian Fulgur Anjanath",
+    "Fulgurglaive Guardiana": {
+        "name": "Fulgurglaive Guardiana",
+        "tree" : "G. Fulgur",
         "raw": 210,
         "element": "thunder",
         "element_value": 25,
@@ -564,8 +581,9 @@
             }
         }
     },
-    "Rathian": {
-        "name": "Rathian",
+    "Queen Regalia": {
+        "name": "Queen Regalia",
+        "tree" : "Rathian",
         "raw": 210,
         "element": "poison",
         "element_value": 18,
@@ -598,8 +616,9 @@
             }
         }
     },
-    "Rathalos": {
-        "name": "Rathalos",
+    "Firedance Rathmaul": {
+        "name": "Firedance Rathmaul",
+        "tree" : "Rathalos",
         "raw": 200,
         "element": "fire",
         "element_value": 25,
@@ -631,8 +650,9 @@
             }
         }
     },
-    "Gore Magala": {
-        "name": "Gore Magala",
+    "Leumundsgift": {
+        "name": "Leumundsgift",
+        "tree" : "Gore Magala",
         "raw": 200,
         "element": "dragon",
         "element_value": 20,
@@ -664,8 +684,9 @@
             }
         }
     },
-    "Blangonga": {
-        "name": "Blangonga",
+    "Immaculate Blizzard": {
+        "name": "Immaculate Blizzard",
+        "tree" : "Blangonga",
         "raw": 230,
         "element": "ice",
         "element_value": 18,
@@ -697,8 +718,9 @@
             }
         }
     },
-    "Gravios": {
-        "name": "Gravios",
+    "Gravordius": {
+        "name": "Gravordius",
+        "tree" : "Gravios",
         "raw": 250,
         "element": "blast",
         "element_value": 25,
