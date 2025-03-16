@@ -1,0 +1,32 @@
+Todo
+
+## UI
+None
+
+## Data labelling
+None
+
+## Logic
+Add all skills to damage logic
+
+## Features
+- Save/Load Sets dropdown
+- Allow user to save sets with a name, and load them from a list
+
+## Find Optimal Weapon button
+- click button in sidebar and it will bring up a popup
+- user should be able to filter out artian weapons they definitely don't want
+- user should select decorations to consider for the slots (adds many combinations) or preset a deco combo
+- after entering all info, user hits "find weapon"
+- user gets live update on how many combos are searched (multi-thread?)
+- at the end user gets top X results, with option to equip each weapon and it's deco set
+- output is cached
+
+## Monster/hitzone select
+- User should be able to select monsters and hitzones from a dropdown
+
+## Compare Sets (two above combined)
+- User should be able to pick multiple sets and get a breakdown of which set wins against which monster
+
+## Combo Calculator
+- Users can create combos from the available moves and calculate the total damage they should deal (one day maybe get the frame data and do a combo DPS display)
