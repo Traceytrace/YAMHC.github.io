@@ -4,10 +4,10 @@ Todo
 None
 
 ## Data labelling
-None
+- Add frame data for moves (not yet possible)
 
 ## Logic
-Add all skills to damage logic
+-Add all skills to damage logic
 
 ## Features
 - Save/Load Sets dropdown
