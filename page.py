@@ -68,8 +68,8 @@ if 'user_armor_rank_setting' not in st.session_state:
     st.session_state.user_armor_rank_setting = 'High'
 if 'equipped_helm' not in st.session_state:
     st.session_state.equipped_helm = None
-if 'actoveskillcontrol' not in st.session_state:
-    st.session_state.activeskillscontrol = []
+if 'activeskillcontrol' not in st.session_state:
+    st.session_state.activeskillcontrol = []
 
 
 if 'charm_names' in st.session_state:
@@ -693,12 +693,19 @@ with col2:
             pause_screen_stat_cols = st.columns(3)
 
             with pause_screen_stat_cols[0]:
-                st.write(f":red[Raw portion]")
+                st.write(f":red[Attack Stat]")
                 st.write(f"{format_sig_figs(damage_stats_dict['attack screen raw'], sig_figs_pause_screen, mode=mode)}")
 
             with pause_screen_stat_cols[1]:
-                st.write(f":red[Elemental portion]")
+                st.write(f":red[Affinity Stat]")
+                st.write(f"{format_sig_figs(damage_stats_dict['attack screen affinity'], sig_figs_pause_screen, mode=mode)}%")
+
+            with pause_screen_stat_cols[2]:
+                st.write(f":red[Element Stat]")
                 st.write(f"{format_sig_figs(damage_stats_dict['attack screen element'], sig_figs_pause_screen, mode=mode)}")
+
+            
+            
             
 
 

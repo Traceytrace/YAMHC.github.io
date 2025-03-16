@@ -395,17 +395,19 @@ class mixed_set:
         #-----------------------------------------
         # Run Formulae
         #-----------------------------------------
+        attack_screen_affinity = affinity*100
+        print(f'attack screen affinity: {attack_screen_affinity}')
         if affinity_override != None:
             affinity = affinity_override
         
         attack_screen_raw = raw
         attack_screen_element = elemental_damage
-
+        
 
         effective_raw = raw * sharpness_modifier * (1 + affinity * crit_modifier)
         effective_element = elemental_damage / 10  * ele_sharpness_modifier  
         #effective_sharpness = base_sharpness
-        return effective_raw, effective_element, attack_screen_raw, attack_screen_element
+        return effective_raw, effective_element, attack_screen_raw, attack_screen_element, attack_screen_affinity
 
     def calculate_damage_number(self, raw_damage, ele_damage, raw_mv, ele_mv, raw_hitzone, ele_hitzone):
         #efr = self.calculate_efr()
@@ -421,15 +423,16 @@ class mixed_set:
         stats_dict = {}
 
         # NO UPTIME APPLIED
-        _, _, attack_screen_raw, attack_screen_element = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=0, verbose = True, triple_up=triple_up)
+        _, _, attack_screen_raw, attack_screen_element, attack_screen_affinity = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=0, verbose = True, triple_up=triple_up)
         
         # UPTIME APPLIED
-        non_crit_raw_dmg, non_crit_ele_dmg, _, _ = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=0, verbose = True, triple_up=triple_up, uptime_dict=uptime_dict)
-        crit_raw_dmg, crit_ele_dmg, _, _ = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=1, triple_up=triple_up, uptime_dict=uptime_dict)
-        effective_raw, effective_element, _, _ = self.calculate_efr(active_conditional_skills=active_skills, triple_up=triple_up, uptime_dict=uptime_dict)
+        non_crit_raw_dmg, non_crit_ele_dmg, _, _, _ = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=0, verbose = True, triple_up=triple_up, uptime_dict=uptime_dict)
+        crit_raw_dmg, crit_ele_dmg, _, _, _ = self.calculate_efr(active_conditional_skills=active_skills, affinity_override=1, triple_up=triple_up, uptime_dict=uptime_dict)
+        effective_raw, effective_element, _, _, _ = self.calculate_efr(active_conditional_skills=active_skills, triple_up=triple_up, uptime_dict=uptime_dict)
         
         stats_dict['attack screen raw'] = attack_screen_raw
         stats_dict['attack screen element'] = attack_screen_element
+        stats_dict['attack screen affinity'] = attack_screen_affinity
         stats_dict['effective_raw'] = effective_raw
         stats_dict['effective_element'] = effective_element
         stats_dict['total effective damage'] = effective_raw + effective_element
