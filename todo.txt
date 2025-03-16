@@ -5,9 +5,13 @@ None
 
 ## Data labelling
 - Add frame data for moves (not yet possible)
+- Correctly label ig moves by prerequisites
+- Add airborne label to ig moves data
+- Hits of Sharpness to weapons
 
 ## Logic
--Add all skills to damage logic
+- Add all skills to damage logic
+- Add sharpness to calculator and effective sharpness affected by skills
 
 ## Features
 - Save/Load Sets dropdown
