@@ -360,29 +360,59 @@ class mixed_set:
         # calc affinity and crit modifiers
         #-----------------------------------------
         affinity = base_affinity
+        max_affinity_boost = base_affinity
         #print(f'affinity BEFORE skills: {affinity}')
         if 'Critical Eye' in self.equipped_skills:
-            affinity+= skill_boosts.critical_eye[self.skills_plus_zeroes['Critical Eye']]
+            boost = skill_boosts.critical_eye[self.skills_plus_zeroes['Critical Eye']]
+            max_affinity_boost += boost
+            affinity += boost
         if 'Agitator' in active_conditional_skills:
             boost = skill_boosts.agitator_affinity[self.skills_plus_zeroes['Agitator']]
+            max_affinity_boost += boost
             affinity += boost * (uptime_dict['Agitator'] / 100) if 'Agitator' in uptime_dict else boost
         if 'Foray' in active_conditional_skills:
             boost = skill_boosts.foray_affinity[self.skills_plus_zeroes['Foray']]
+            max_affinity_boost += boost
             affinity += boost * (uptime_dict['Foray'] / 100) if 'Foray' in uptime_dict else boost
         if 'Latent Power' in active_conditional_skills:
             boost = skill_boosts.latent_power[self.skills_plus_zeroes['Latent Power']]
+            max_affinity_boost += boost
             affinity += boost * (uptime_dict['Latent Power'] / 100) if 'Latent Power' in uptime_dict else boost
         if 'Maximum Might' in active_conditional_skills:
             boost = skill_boosts.maximum_might[self.skills_plus_zeroes['Maximum Might']]
+            max_affinity_boost += boost
             affinity += boost * (uptime_dict['Maximum Might'] / 100) if 'Maximum Might' in uptime_dict else boost
         if "Gore Magala's Tyranny" in active_conditional_skills:
             boost = skill_boosts.black_eclipse_affinity[self.skills_plus_zeroes["Gore Magala's Tyranny"]]
+            max_affinity_boost += boost
             affinity += boost * (uptime_dict["Gore Magala's Tyranny"] / 100) if "Gore Magala's Tyranny" in uptime_dict else boost
-            if 'Antivirus' in active_conditional_skills:
+            if 'Antivirus' in active_conditional_skills and self.skills_plus_zeroes["Gore Magala's Tyranny"] >= 2:
                 boost = skill_boosts.antivirus[self.skills_plus_zeroes['Antivirus']]
+                max_affinity_boost += boost
                 affinity += boost * (uptime_dict['Antivirus'] / 100) if 'Antivirus' in uptime_dict else boost
-        #print(f'affinity AFTER skills: {affinity}')
         
+        attack_screen_affinity = affinity*100
+        
+        if 'Weakness Exploit' in active_conditional_skills:
+            print(f'weakness exploit: {self.skills_plus_zeroes["Weakness Exploit"]}')
+            boost = skill_boosts.weakness_exploit_weak_point[self.skills_plus_zeroes['Weakness Exploit']]
+            max_affinity_boost += boost
+            affinity += boost * (uptime_dict["Weakness Exploit Weak Point Slider"] / 100) if 'Weakness Exploit Weak Point Slider' in uptime_dict else boost
+            st.session_state['affinity (on weak point hit)'] = affinity*100
+            boost = skill_boosts.weakness_exploit_wound[self.skills_plus_zeroes['Weakness Exploit']]
+            max_affinity_boost += boost
+            affinity += boost * (uptime_dict["Weakness Exploit Wound Slider"] / 100) if 'Weakness Exploit Wound Slider' in uptime_dict else boost
+            st.session_state['affinity (on wound hit)'] = affinity*100
+        
+
+        if affinity > 1:
+            affinity = 1
+        
+        print(f'max affinity: {max_affinity_boost*100}')
+        
+        st.session_state['max_affinity_boost'] = round(max_affinity_boost*100)/100
+        
+
         # crit modifiers
         if 'Critical Boost' in active_conditional_skills:
             crit_boost = self.skills_plus_zeroes['Critical Boost']
@@ -395,7 +425,6 @@ class mixed_set:
         #-----------------------------------------
         # Run Formulae
         #-----------------------------------------
-        attack_screen_affinity = affinity*100
         print(f'attack screen affinity: {attack_screen_affinity}')
         if affinity_override != None:
             affinity = affinity_override

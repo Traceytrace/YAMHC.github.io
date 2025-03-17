@@ -606,14 +606,25 @@ with col1:
             capped_level = min(level, skill_data[skill]['max_level'])
             skill_name = f"{skill} {capped_level}"
 
-            if skill_data[skill]["conditional"] == "true":
+            if skill == "Weakness Exploit":
+                with st.sidebar.container(border=True):
+                    st.markdown(f'{skill_name}', unsafe_allow_html=True, help = "Uptime for Weakness Exploit is split into two parts: Weak Point Uptime and Wound Uptime. Each Slider should represent what percentage of the time you expect to hit which type of part. Since all wounds are weak points, Weak Point Uptime must always be greater than or equal to Wound Uptime.\n\n This skill will not affect the pause screen affinity stat, but will affect effective damage numbers.")
+                    st.markdown(f'<div class="small-text">Weak Point Uptime</div>', unsafe_allow_html=True)
+
+                    uptime_dict["Weakness Exploit Weak Point Slider"] = st.slider(label = "Weakness Exploit Weak Point Slider", min_value=0, max_value=100, value=100, key = f"active_skill_{skill}_weakpoint_uptime", label_visibility="collapsed")
+                    st.markdown(f'<div class="small-text">Wound Uptime</div>', unsafe_allow_html=True)
+
+                    uptime_dict["Weakness Exploit Wound Slider"] = st.slider(label = "Weakness Exploit Wound Slider", min_value=0, max_value=100, value=50, key = f"active_skill_{skill}_wound_uptime", label_visibility="collapsed")
+                    if uptime_dict["Weakness Exploit Weak Point Slider"] < uptime_dict["Weakness Exploit Wound Slider"]:
+                        st.sidebar.warning("Weak Point Uptime must be greater than or equal to Wound Uptime", icon="⚠️")
+            elif skill_data[skill]["conditional"] == "true":
                 st.sidebar.markdown(f'<div class="small-text">{skill_name}</div>', unsafe_allow_html=True)
                 uptime_dict[skill] = st.sidebar.slider(label = skill_name, min_value=0, max_value=100, value=100, key = f"active_skill_{skill}_uptime", label_visibility="collapsed")
             elif not show_unconditional_skills:
                 
                 st.sidebar.markdown(f'<div class="small-text">{skill_name}</div>', unsafe_allow_html=True)
                 uptime_dict[skill] = st.sidebar.slider(label = skill_name, min_value=0, max_value=100, value=100, key = f"active_skill_{skill}_uptime",disabled=True, label_visibility="collapsed")
-            
+          
 with col2:
 
     #################################################
@@ -655,7 +666,10 @@ with col2:
         
         with expander_col_2:
             with st.popover("Calculator Settings", use_container_width=True):
-                st.write('placeholder')
+                sig_figs_pause_screen = st.number_input("Pause Screen Decimal Places", min_value=0, max_value=5, value=0, step=1, key = 'sig_figs_pause_screen')
+                sig_figs_equip_set = st.number_input("Significant Figures", min_value=0, max_value=5, value=1, step=1, key = 'sig_figs_equip_set')
+                sig_figs_wep_attack = st.number_input("Significant Figures", min_value=0, max_value=5, value=1, step=1, key= 'sig_figs_wep_attack')
+
 
         active_conditional_skills = st.pills("Conditional Skills", options=conditional_skills, selection_mode="multi", key='activeskillscontrol')
         active_skills = non_conditional_skills + active_conditional_skills
@@ -686,8 +700,6 @@ with col2:
         ################################################################ 
 
         with st.expander("Pause Screen Stats", expanded = True):
-            sig_figs_pause_screen = st.number_input("Significant Figures", min_value=0, max_value=5, value=0, step=1, key = 'sig_figs_pause_screen')
-
             mode = 'down'
 
             pause_screen_stat_cols = st.columns(3)
@@ -697,8 +709,16 @@ with col2:
                 st.write(f"{format_sig_figs(damage_stats_dict['attack screen raw'], sig_figs_pause_screen, mode=mode)}")
 
             with pause_screen_stat_cols[1]:
-                st.write(f":red[Affinity Stat]")
-                st.write(f"{format_sig_figs(damage_stats_dict['attack screen affinity'], sig_figs_pause_screen, mode=mode)}%")
+                
+                if 'Weakness Exploit' in active_conditional_skills:
+                    st.markdown(f":red[Affinity Stat]", help = "Weakness Exploit is active. The three numbers below are [Pause Screen Affinity] / [Affinity on Weak Point Hit] / [Affinity on Wound Hit].")
+                    weak_point_affinity = format_sig_figs(st.session_state['affinity (on weak point hit)'], sig_figs_pause_screen, mode=mode)
+                    wound_affinity = format_sig_figs(st.session_state['affinity (on wound hit)'], sig_figs_pause_screen, mode=mode)
+                    affinity_stat_text = f"{format_sig_figs(damage_stats_dict['attack screen affinity'], sig_figs_pause_screen, mode=mode)}%/{weak_point_affinity}%/{wound_affinity}%"
+                else:
+                    st.write(f":red[Affinity Stat]")
+                    affinity_stat_text = f"{format_sig_figs(damage_stats_dict['attack screen affinity'], sig_figs_pause_screen, mode=mode)}%"
+                st.write(affinity_stat_text)
 
             with pause_screen_stat_cols[2]:
                 st.write(f":red[Element Stat]")
@@ -713,11 +733,12 @@ with col2:
         # Display Armor Set Stats
         ################################################################
 
-        with st.expander("Armor Set Damage Stats"):
+        with st.expander("Damage Output Stats", expanded = True):
+            if st.session_state['max_affinity_boost'] > 1:
+                
+                st.warning(f"Your armor set is capable of achieving {st.session_state['max_affinity_boost']*100}% affinity. This can lead to lower :green[***effective***] damage output in-game than what is shown here, depending on how likely you are to hit the affinity cap in-game.")
 
             values = damage_stats_dict
-            sig_figs_equip_set = st.number_input("Significant Figures", min_value=0, max_value=5, value=1, step=1, key = 'sig_figs_equip_set')
-
             mode = 'nearest'
 
             equip_set_stat_cols = st.columns(3)
@@ -759,7 +780,6 @@ with col2:
             if selected_attack:
                 values = damage_number_dict[selected_attack]
                 attack_num_cols = st.columns(3)
-                sig_figs_wep_attack = st.number_input("Significant Figures", min_value=0, max_value=5, value=1, step=1, key= 'sig_figs_wep_attack')
 
                 mode = 'nearest'
 

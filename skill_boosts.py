@@ -9,6 +9,8 @@ peak_performance = [0,3,6,10,15,20]
 resentment = [0,5,10,15,20,25]
 black_eclipse_raw_afflicted = [0,0,0,0,10,10]
 black_eclipse_raw_recovered = [0,0,0,0,5,5]
+offensive_guard = [0,0,0,0]
+
 
 # percent attack
 ambush = [0, 0.05, 0.1, 0.15] 
@@ -41,7 +43,8 @@ latent_power = [0, 0.1, 0.2, 0.3, 0.4, 0.5]
 maximum_might = [0,0.1,0.2,0.3]
 black_eclipse_affinity = [0,0,0.15,0.15,0.15,0.15]
 antivirus = [0,0.03,0.06,0.1]
-
+weakness_exploit_weak_point = [0,0.05,0.10,0.15,0.20,0.30]
+weakness_exploit_wound = [0,0.03,0.05,0.10,0.15,0.20]
 # percent to not lose sharpness
 masters_touch = [0, 0.8]
 razor_sharp = [0,0.1,0.25,0.5]
